@@ -1,0 +1,224 @@
+<title>The Last Watt</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&family=DM+Mono:wght@400;500&display=swap">
+<style>
+  :root{
+    --ink:#0C0810; --ink2:#150E1C; --ink3:#1F1526;
+    --glow:#FFD89A; --filament:#FF9F38; --brass:#A8834F;
+    --paper:#EDE2D4; --dim:#9C8B7B; --rule:#2A1E31;
+    --maxw:680px;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--ink); color:var(--paper);
+    font-family:'Newsreader',Georgia,'Times New Roman',serif;
+    font-size:18px; line-height:1.65; font-weight:300;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:var(--maxw); margin:0 auto; padding-inline:20px}
+  h1,h2,h3,.disp{font-family:'Bricolage Grotesque','Helvetica Neue',Arial,sans-serif; text-wrap:balance}
+  .mono{font-family:'DM Mono','SF Mono',ui-monospace,Menlo,monospace}
+  a{color:var(--glow)} a:hover{color:#fff3dc}
+  :focus-visible{outline:2px solid var(--glow); outline-offset:3px}
+
+  /* HERO */
+  .hero{position:relative; overflow:hidden; padding-block:72px 56px; text-align:center}
+  .hero::before{
+    content:""; position:absolute; inset:-30% -20% auto -20%; height:820px;
+    background:radial-gradient(ellipse at 50% 34%, rgba(255,216,154,.30) 0%, rgba(255,180,92,.09) 38%, rgba(255,180,92,0) 68%);
+    pointer-events:none;
+  }
+  .hero > *{position:relative}
+  .cord{width:2px; height:70px; background:linear-gradient(var(--rule),#4a3626); margin:0 auto -6px}
+  .icon{width:132px; height:132px; display:block; margin:0 auto}
+  .eyebrow{font-size:11px; letter-spacing:.24em; text-transform:uppercase; color:var(--brass); margin-top:30px}
+  h1{font-size:clamp(46px,12vw,86px); font-weight:800; line-height:.94; letter-spacing:-.03em; margin:12px 0 0}
+  .tagline{font-size:clamp(19px,4.6vw,24px); color:var(--glow); font-style:italic; margin:14px 0 0}
+  .status{margin-top:26px; font-size:12.5px; letter-spacing:.05em; color:var(--dim)}
+  .status b{color:var(--paper); font-weight:500}
+
+  /* STORY */
+  .story{padding-block:8px 60px}
+  .time{font-size:13px; letter-spacing:.2em; color:var(--filament)}
+  .story p{margin:18px 0}
+  .lead{font-size:clamp(23px,5.4vw,30px); line-height:1.35; color:var(--paper); font-weight:300; margin-top:10px}
+  .beat{font-family:'Bricolage Grotesque',sans-serif; font-weight:600; font-size:clamp(28px,7vw,40px); color:var(--glow); letter-spacing:-.02em; margin:26px 0}
+
+  /* DIVIDER: hanging bulb */
+  .div{display:flex; flex-direction:column; align-items:center; padding-block:34px}
+  .div .line{width:1px; height:40px; background:var(--rule)}
+  .div .dot{width:9px; height:9px; border-radius:50%; background:var(--glow); box-shadow:0 0 16px 5px rgba(255,216,154,.35)}
+
+  section h2{font-size:12px; letter-spacing:.24em; text-transform:uppercase; color:var(--brass); font-weight:600; margin:0 0 22px}
+
+  /* VERBS */
+  .verbs{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px}
+  .verb{border-top:1px solid var(--rule); padding-top:14px}
+  .verb .k{font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--glow)}
+  .verb .v{font-size:16px; color:var(--dim); line-height:1.45; margin-top:6px}
+
+  /* LIGHT METER */
+  .meter{margin-top:14px}
+  .bar{height:16px; border-radius:99px; background:linear-gradient(90deg,#1B1320 0%, #4A3524 38%, #B4813F 72%, var(--glow) 100%)}
+  .barlab{display:flex; justify-content:space-between; margin-top:10px; font-size:12.5px; color:var(--dim)}
+  .barlab span:last-child{color:var(--glow)}
+
+  /* ZONES */
+  .zones{width:100%; border-collapse:collapse; margin-top:6px}
+  .zones td{border-bottom:1px solid var(--rule); padding:11px 0; vertical-align:baseline}
+  .zones td:first-child{width:104px; color:var(--brass); font-size:14px}
+  .zones td:last-child{color:var(--dim); font-size:15px; text-align:right}
+  .zones .z{color:var(--paper)}
+
+  /* NOTS */
+  .nots p{font-family:'Bricolage Grotesque',sans-serif; font-weight:600; font-size:clamp(21px,5vw,27px);
+    line-height:1.25; letter-spacing:-.02em; margin:0 0 16px; color:var(--paper)}
+  .nots p span{color:var(--dim); font-weight:400}
+  .nots .after{font-family:'Newsreader',serif; font-size:17px; color:var(--dim); font-weight:300; margin-top:26px; line-height:1.6}
+
+  /* SPECS */
+  .specs{border:1px solid var(--rule); border-radius:4px; background:var(--ink2); padding:22px 20px}
+  .specs dl{display:grid; grid-template-columns:auto 1fr; gap:11px 18px; margin:0}
+  .specs dt{font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:var(--brass)}
+  .specs dd{margin:0; font-size:14.5px; text-align:right; font-variant-numeric:tabular-nums}
+
+  footer{border-top:1px solid var(--rule); margin-top:60px; padding-block:34px 60px; color:var(--dim); font-size:14.5px}
+  footer .made{color:var(--paper)}
+  .note{font-size:13px; color:var(--brass); margin-top:8px}
+
+  @media (max-width:520px){
+    .verbs{grid-template-columns:1fr}
+    .zones td:first-child{width:88px}
+  }
+  @media (prefers-reduced-motion:no-preference){
+    .flicker{animation:fl 6s ease-in-out infinite}
+    @keyframes fl{0%,92%,100%{opacity:1}94%{opacity:.72}96%{opacity:1}97%{opacity:.85}}
+  }
+</style>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="cord"></div>
+    <svg class="icon flicker" viewBox="0 0 240 240" role="img" aria-label="The Last Watt app icon: a glowing lightbulb with a raised eyebrow and a crooked grin">
+      <defs>
+        <radialGradient id="halo" cx="50%" cy="46%" r="50%">
+          <stop offset="0%" stop-color="#FFD89A" stop-opacity=".78"/>
+          <stop offset="100%" stop-color="#FFB15C" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="glas" cx="60%" cy="32%" r="74%">
+          <stop offset="0%" stop-color="#FFFDF4"/><stop offset="44%" stop-color="#FFE3AB"/><stop offset="100%" stop-color="#E89B47"/>
+        </radialGradient>
+        <linearGradient id="sock" x1="0" y1="0" x2="1" y2=".4">
+          <stop offset="0%" stop-color="#3A2C28"/><stop offset="65%" stop-color="#7A6144"/><stop offset="100%" stop-color="#B58B56"/>
+        </linearGradient>
+      </defs>
+      <ellipse cx="120" cy="100" rx="128" ry="124" fill="url(#halo)"/>
+      <path d="M92 176 h56 v34 q0 10 -10 10 h-36 q-10 0 -10 -10 z" fill="url(#sock)"/>
+      <path d="M92 187 h56 M92 199 h56" stroke="#150E1C" stroke-width="3.4"/>
+      <circle cx="120" cy="104" r="74" fill="url(#glas)"/>
+      <path d="M166 56 a74 74 0 0 1 21 42" stroke="#FFFDF2" stroke-width="7" fill="none" stroke-linecap="round" opacity=".9"/>
+      <ellipse cx="97" cy="110" rx="14" ry="18" fill="#2C1B0B"/>
+      <ellipse cx="146" cy="108" rx="13" ry="17" fill="#2C1B0B"/>
+      <path d="M66 62 L112 88" stroke="#2C1B0B" stroke-width="15" stroke-linecap="round"/>
+      <path d="M174 82 L130 92" stroke="#2C1B0B" stroke-width="15" stroke-linecap="round"/>
+      <path d="M100 146 q22 14 44 -4" stroke="#2C1B0B" stroke-width="9" fill="none" stroke-linecap="round"/>
+    </svg>
+    <div class="eyebrow">The Happy Legend</div>
+    <h1>The Last<br>Watt</h1>
+    <p class="tagline">Climb the dark house, offline.</p>
+    <p class="status mono">Coming to iPhone and iPad · <b>29 kr / $2.99</b>, once · no ads, no subscription</p>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <section class="story">
+    <p class="time mono">21:04</p>
+    <p class="lead">The power goes out. The fridge stops humming. The television dies mid-sentence. Somewhere upstairs a lamp gives up with a small, final click.</p>
+    <p class="beat">You do not.</p>
+    <p>You are the last watt still burning in a very dark house: a bare bulb with two springy legs and a distinctly poor attitude about the whole situation. You have one plan, and it is to get to the roof.</p>
+    <p>On the way up, dead lamps hang in the dark. Fly past one and it comes back on — and it stays on behind you. By the time you reach the attic you can look down and see exactly how far you have come, one small light at a time.</p>
+  </section>
+
+  <div class="div"><div class="line"></div><div class="dot"></div></div>
+
+  <section>
+    <h2>Two thumbs are one too many</h2>
+    <div class="verbs">
+      <div class="verb"><div class="k mono">Tilt</div><div class="v">Lean the phone and she drifts. The walls stop her.</div></div>
+      <div class="verb"><div class="k mono">Tap</div><div class="v">One flap upward. It costs a little light.</div></div>
+      <div class="verb"><div class="k mono">Hold</div><div class="v">Fly. It costs a lot of light.</div></div>
+    </div>
+  </section>
+
+  <div class="div"><div class="line"></div><div class="dot"></div></div>
+
+  <section>
+    <h2>Your light is the scoreboard</h2>
+    <p style="margin-top:0">Land clean in the middle of a shelf and you burn brighter. The brighter you burn, the further into the room you can see, and the fuller the music gets. Clip the edge and you go dark, the music thins to a single note, and the house closes in around you.</p>
+    <div class="meter">
+      <div class="bar"></div>
+      <div class="barlab mono"><span>one shelf ahead</span><span>the whole room</span></div>
+    </div>
+    <p>There is no number to read. You can see how well you are playing, and you can hear it.</p>
+  </section>
+
+  <div class="div"><div class="line"></div><div class="dot"></div></div>
+
+  <section>
+    <h2>Six floors up</h2>
+    <table class="zones">
+      <tr><td class="mono">0–300 m</td><td class="z">The cellar</td><td>jam jars, pipes, a bicycle</td></tr>
+      <tr><td class="mono">300–800</td><td class="z">The living room</td><td>book spines, lampshades</td></tr>
+      <tr><td class="mono">800–1500</td><td class="z">The stairs</td><td>bannisters, picture frames</td></tr>
+      <tr><td class="mono">1500–2400</td><td class="z">The attic</td><td>boxes, suitcases, beams</td></tr>
+      <tr><td class="mono">2400–3000</td><td class="z">The chimney</td><td>nothing at all. Keep flapping</td></tr>
+      <tr><td class="mono">3000+</td><td class="z">The roof</td><td>tiles, aerials, stars</td></tr>
+    </table>
+    <p style="font-size:16px;color:var(--dim)">Water rises from the cellar. The dark crawls up after you in long fingers. And something with green eyes waits at the bottom of the stairs. Everything warns you before it arrives — nothing here kills you out of nowhere.</p>
+  </section>
+
+  <div class="div"><div class="line"></div><div class="dot"></div></div>
+
+  <section class="nots">
+    <h2>What is not in it</h2>
+    <p>No ads. <span>Not one.</span></p>
+    <p>No in-app purchases, no currency, no loot boxes, no energy bar.</p>
+    <p>No account, no email, no tracking of any kind.</p>
+    <p>No internet. <span>The whole game lives on your phone.</span></p>
+    <p class="after">You pay once and you own it. That is the entire business model, and it is the reason the game works on a plane, on the underground, in a lift, in a cabin with no signal. Your records are kept on your phone and in your own iCloud, and nowhere else.</p>
+  </section>
+
+  <div class="div"><div class="line"></div><div class="dot"></div></div>
+
+  <section>
+    <h2>Playable in the dark, by everyone</h2>
+    <p style="margin-top:0">The game gets darker when you play worse — which would make it unplayable for anyone with low vision. So there is a light floor you can switch on, with audio cues that tell you where the next platform is. It turns itself on automatically if you use Increase Contrast or VoiceOver. The penalty stays in the music and the score, never in what you can see.</p>
+    <p>Three control schemes, one of them playable with a single switch. Full VoiceOver. Reduce Motion respected throughout. Obstacles are told apart by shape, not only by colour.</p>
+  </section>
+
+  <div class="div"><div class="line"></div><div class="dot"></div></div>
+
+  <section>
+    <h2>The details</h2>
+    <div class="specs mono">
+      <dl>
+        <dt>Price</dt><dd>29 kr / $2.99 · one time</dd>
+        <dt>Devices</dt><dd>iPhone and iPad</dd>
+        <dt>Requires</dt><dd>iOS 17 or later</dd>
+        <dt>Internet</dt><dd>Never</dd>
+        <dt>Account</dt><dd>None</dd>
+        <dt>Game Center</dt><dd>Optional</dd>
+        <dt>A run lasts</dt><dd>about 30 seconds</dd>
+        <dt>Status</dt><dd>In development</dd>
+      </dl>
+    </div>
+  </section>
+
+  <footer>
+    <p class="made">Made in Sweden by The Happy Legend.</p>
+    <p>Questions, or want a press copy when there is one to give? <a href="mailto:kristoffer@thehappylegend.com">kristoffer@thehappylegend.com</a></p>
+    <p><a href="/lastwatt/privacy/">Privacy</a> &middot; <a href="/lastwatt/support/">Support</a></p>
+    <p class="note">The game is not released yet, and there is nothing to download from this page.</p>
+  </footer>
+
+</div>
