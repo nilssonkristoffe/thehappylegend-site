@@ -3,27 +3,84 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Keepfold — The Happy Legend</title>
-<meta name="description" content="The registration number, the Wi‑Fi password, the booking reference. Saved as cards, found in a second, copied with one tap.">
+<title>Keepfold — The things you need for now</title>
+<meta name="description" content="Keepfold keeps the small things you look up for a few days — room numbers, booking references, Wi-Fi passwords — exactly as typed, and tidies them away on the day you choose. iPhone and iPad. No account, no tracking.">
 <link rel="canonical" href="https://thehappylegend.com/keepfold/">
 <meta name="robots" content="index,follow">
 <meta name="theme-color" content="#FFFFFF">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="The Happy Legend">
-<meta property="og:title" content="Keepfold — The Happy Legend">
-<meta property="og:description" content="The registration number, the Wi‑Fi password, the booking reference. Saved as cards, found in a second, copied with one tap.">
+<meta property="og:title" content="Keepfold — The things you need for now">
+<meta property="og:description" content="Keepfold keeps the small things you look up for a few days — room numbers, booking references, Wi-Fi passwords — exactly as typed, and tidies them away on the day you choose. iPhone and iPad. No account, no tracking.">
 <meta property="og:url" content="https://thehappylegend.com/keepfold/">
 <meta property="og:image" content="https://thehappylegend.com/assets/og-keepfold.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Keepfold — The Happy Legend">
-<meta name="twitter:description" content="The registration number, the Wi‑Fi password, the booking reference. Saved as cards, found in a second, copied with one tap.">
+<meta name="twitter:title" content="Keepfold — The things you need for now">
+<meta name="twitter:description" content="Keepfold keeps the small things you look up for a few days — room numbers, booking references, Wi-Fi passwords — exactly as typed, and tidies them away on the day you choose. iPhone and iPad. No account, no tracking.">
 <meta name="twitter:image" content="https://thehappylegend.com/assets/og-keepfold.png">
 <link rel="icon" href="/assets/favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="stylesheet" href="/style.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Keepfold","operatingSystem":"iOS","applicationCategory":"UtilitiesApplication","url":"https://thehappylegend.com/keepfold/","installUrl":"https://apps.apple.com/app/id6810941176","image":"https://thehappylegend.com/assets/keepfold.png","description":"The registration number, the Wi‑Fi password, the booking reference. Saved as cards, found in a second, copied with one tap.","author":{"@type":"Organization","name":"The Happy Legend"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Keepfold","operatingSystem":"iOS","applicationCategory":"UtilitiesApplication","url":"https://thehappylegend.com/keepfold/","installUrl":"https://apps.apple.com/app/id6810941176","image":"https://thehappylegend.com/assets/keepfold.png","description":"Keepfold keeps the small things you look up for a few days — room numbers, booking references, Wi-Fi passwords — exactly as typed, and tidies them away on the day you choose.","offers":{"@type":"Offer","price":"0","priceCurrency":"SEK"},"author":{"@type":"Organization","name":"The Happy Legend"}}</script>
+<style>
+  .kf{--paper:#F8F7F4;--ink:#202520;--mist:#687069;--line:#E5E7E2;--accent:#414E46;--brass:#A68854}
+  .kf{background:var(--paper);color:var(--ink)}
+  .kf .wrap{width:min(1120px,100% - 2*clamp(20px,5vw,64px));margin-inline:auto}
+  .kf-hero{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(32px,6vw,96px);align-items:center;padding-block:clamp(64px,10vh,120px) clamp(48px,8vh,96px)}
+  .kf .eyebrow{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--brass);margin:0 0 18px}
+  .kf h1{margin:0;font-size:clamp(40px,5.6vw,72px);font-weight:600;letter-spacing:-.035em;line-height:1.02;text-wrap:balance}
+  .kf .lede{font-size:clamp(18px,1.7vw,22px);color:var(--mist);margin:20px 0 0;max-width:42ch;text-wrap:pretty}
+  .kf .cta{display:inline-flex;align-items:center;gap:10px;margin-top:28px;padding:14px 22px;border-radius:999px;background:var(--accent);color:#fff;font-size:15px;font-weight:600;transition:transform .35s var(--ease),background .3s var(--ease)}
+  .kf .cta:hover{transform:translateY(-2px);background:#2f3b34}
+  .kf .cta svg{width:16px;height:16px}
+  .kf .price{margin:14px 0 0;font-size:14px;color:var(--mist)}
+  .phone{display:block;width:100%;max-width:340px;margin-inline:auto;border-radius:44px;box-shadow:0 30px 60px -30px rgba(32,37,32,.45);transition:transform .6s var(--ease)}
+  .phone:hover{transform:translateY(-6px)}
+  .kf-hero .phone{max-width:380px}
+  .scene{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,96px);align-items:center;padding-block:clamp(48px,8vh,96px);border-top:1px solid var(--line)}
+  .scene:nth-child(even) .copy{order:2}
+  .scene h2{margin:0;font-size:clamp(28px,3.2vw,44px);font-weight:600;letter-spacing:-.03em;line-height:1.08;text-wrap:balance}
+  .scene p{font-size:17px;line-height:1.55;color:var(--mist);max-width:44ch;margin:16px 0 0}
+  .scene .phone{max-width:300px}
+  .pair{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,64px);padding-block:clamp(48px,8vh,96px);border-top:1px solid var(--line)}
+  .pair .cell{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center}
+  .pair .phone{max-width:220px;border-radius:32px}
+  .pair h3{margin:0;font-size:clamp(20px,2vw,26px);font-weight:600;letter-spacing:-.025em;line-height:1.15}
+  .pair p{font-size:15px;line-height:1.5;color:var(--mist);margin:10px 0 0}
+  .plans{padding-block:clamp(48px,8vh,96px);border-top:1px solid var(--line)}
+  .plans h2,.nots h2,.faq h2{margin:0 0 28px;font-size:clamp(26px,3vw,40px);font-weight:600;letter-spacing:-.03em;line-height:1.08}
+  .plangrid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .plan{border:1px solid var(--line);border-radius:20px;padding:26px 26px 28px;background:#fff}
+  .plan.plus{background:var(--accent);color:#fff;border-color:var(--accent)}
+  .plan .k{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;opacity:.75}
+  .plan .v{font-size:clamp(24px,2.6vw,34px);font-weight:600;letter-spacing:-.03em;margin:8px 0 14px}
+  .plan ul{margin:0;padding:0;list-style:none}
+  .plan li{padding:8px 0;border-top:1px solid rgba(0,0,0,.08);font-size:15px}
+  .plan.plus li{border-top-color:rgba(255,255,255,.18)}
+  .plan .note{font-size:13px;opacity:.7;margin:14px 0 0}
+  .nots{padding-block:clamp(48px,8vh,96px);border-top:1px solid var(--line)}
+  .nots ul{list-style:none;margin:0;padding:0;border-top:1px solid var(--line);max-width:760px}
+  .nots li{padding:18px 0;border-bottom:1px solid var(--line);font-size:clamp(17px,1.6vw,20px);letter-spacing:-.01em}
+  .nots li span{display:block;font-size:15px;color:var(--mist);margin-top:4px}
+  .faq{padding-block:clamp(48px,8vh,96px);border-top:1px solid var(--line)}
+  .faq details{border-bottom:1px solid var(--line);padding:16px 0}
+  .faq details:first-of-type{border-top:1px solid var(--line)}
+  .faq summary{cursor:pointer;font-size:17px;font-weight:600;letter-spacing:-.01em;list-style:none;display:flex;justify-content:space-between;gap:16px}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"+";color:var(--mist);font-weight:400}
+  .faq details[open] summary::after{content:"–"}
+  .faq details p{margin:10px 0 0;color:var(--mist);font-size:15px;line-height:1.55;max-width:62ch}
+  .kf-end{text-align:center;padding-block:clamp(64px,10vh,120px);border-top:1px solid var(--line)}
+  .kf-end h2{margin:0;font-size:clamp(28px,3.4vw,48px);font-weight:600;letter-spacing:-.03em}
+  .kf-end .links{justify-content:center;margin-top:28px}
+  .kf .links a{color:var(--accent)}
+  @supports (animation-timeline: view()){.kf .rv{animation:reveal 1s var(--ease) both;animation-timeline:view();animation-range:entry 0% entry 40%}}
+  @media (max-width:800px){.kf-hero,.scene,.pair,.plangrid{grid-template-columns:1fr}.scene:nth-child(even) .copy{order:0}.kf-hero{text-align:center}.kf .lede{margin-inline:auto}.pair .cell{grid-template-columns:1fr}.pair .phone{max-width:260px}.scene .phone,.kf-hero .phone{max-width:300px}}
+  @media (prefers-reduced-motion:reduce){.kf .rv{animation:none}.phone,.kf .cta{transition:none}}
+</style>
+
 </head>
 <body>
 <header class="nav">
@@ -39,24 +96,96 @@
     </nav>
   </div>
 </header>
-<main>
+<main class="kf">
 
-  <section class="phero wrap">
-    <span class="iconwrap"><img src="/assets/keepfold.png" alt="Keepfold app icon" width="96" height="96"></span>
-    <h1>Keepfold</h1>
-    <p class="lede">The registration number, the Wi‑Fi password, the booking reference. Saved as cards, found in a second, copied with one tap.</p>
-    <a class="cta" href="https://apps.apple.com/app/id6810941176">Download on the App Store <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M6 4h6v6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-    <p class="price">Free to start. Keepfold Plus adds iCloud sync and more.</p>
+  <section class="kf-hero wrap">
+    <div class="copy">
+      <p class="eyebrow">Keepfold for iPhone and iPad</p>
+      <h1>The things you need for now.</h1>
+      <p class="lede">The room number. The booking reference. The Wi‑Fi at the cabin. Keepfold keeps the small things exactly as you typed them — and tidies them away on the day you choose.</p>
+      <a class="cta" href="https://apps.apple.com/app/id6810941176">Download on the App Store <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M6 4h6v6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <p class="price">Free to start. Keepfold Plus for sync and unlimited cards.</p>
+    </div>
+    <img class="phone" src="/assets/keepfold/01-list.webp" alt="Keepfold’s card list on an iPhone: hotel room, booking, gate code, Wi‑Fi" width="640" height="1353" fetchpriority="high">
   </section>
-  <section class="facts wrap">
-    <h2>What it does</h2>
-    <p>Save a card in seconds. Search it, copy it, or show it large enough to read across a counter.</p><p>Lock the sensitive ones behind Face ID. Recently deleted keeps thirty days of safety net.</p><p>Widgets for the cards you use most, and iCloud sync between iPhone and iPad with Plus — encrypted so that neither we nor Apple can read your cards.</p>
-    <h2>What it doesn’t</h2>
-    <p>Nothing leaves your device unless you turn sync on, and you can turn it off again and take everything with you.</p><p>No account, no ads, no tracking.</p><p>It is not a password manager, and does not pretend to be one.</p>
-    <h2>Facts</h2>
-    <ul><li>Platforms<span>iPhone, iPad</span></li><li>Languages<span>English, Swedish</span></li><li>Availability<span>175 countries</span></li><li>Sync<span>Private iCloud, end-to-end encrypted</span></li></ul>
-    <h2>Links</h2>
-    <div class="links"><a href="https://nilssonkristoffe.github.io/keepfold-site/privacy/">Privacy policy</a><a href="https://nilssonkristoffe.github.io/keepfold-site/support/">Support</a><a href="https://nilssonkristoffe.github.io/keepfold-site/press/">Press kit</a></div>
+
+  <section class="scene wrap rv">
+    <div class="copy">
+      <h2>Exactly as you typed it.</h2>
+      <p>Leading zeros, spaces, capitals. No autocorrect, ever. A Wi‑Fi password that gets “helped” is a wrong password. Copy it with one tap, or show it large enough to read across a counter.</p>
+    </div>
+    <img class="phone" src="/assets/keepfold/02-exact.webp" alt="Editing a card in Keepfold" width="640" height="1353" loading="lazy">
+  </section>
+
+  <section class="scene wrap rv">
+    <div class="copy">
+      <h2>Keep until Sunday. Then it tidies itself away.</h2>
+      <p>Give a card a last day. When the day is over it moves to the archive by itself. Nothing is deleted; one tap brings it back. Your list stays the list of things you need this week.</p>
+    </div>
+    <img class="phone" src="/assets/keepfold/03-keep-until.webp" alt="A card kept until Sunday in Keepfold" width="640" height="1353" loading="lazy">
+  </section>
+
+  <section class="scene wrap rv">
+    <div class="copy">
+      <h2>On your Home Screen. Only what you allow.</h2>
+      <p>Home Screen and Lock Screen widgets show the cards you choose and nothing else. A widget can be seen by anyone standing next to you — so you decide, card by card.</p>
+    </div>
+    <img class="phone" src="/assets/keepfold/04-widget.webp" alt="Keepfold widget on the iPhone Home Screen" width="640" height="1353" loading="lazy">
+  </section>
+
+  <section class="pair wrap rv">
+    <div class="cell">
+      <img class="phone" src="/assets/keepfold/05-locked.webp" alt="A locked card in Keepfold showing dots" width="640" height="1353" loading="lazy">
+      <div><h3>Locked with Face ID.</h3><p>A locked card shows dots until it’s you. It never appears in a widget, and search can’t find its value. A shield against a glance — not a safe, and we say so.</p></div>
+    </div>
+    <div class="cell">
+      <img class="phone" src="/assets/keepfold/06-icloud.webp" alt="Keepfold settings with iCloud sync on" width="640" height="1353" loading="lazy">
+      <div><h3>Your iCloud, encrypted.</h3><p>Turn on sync and your iPad sees the same cards. They live in your own iCloud as an encrypted field — we can’t read them, and neither can Apple. Off by default.</p></div>
+    </div>
+  </section>
+
+  <section class="plans wrap rv">
+    <h2>What’s free, what’s Plus.</h2>
+    <div class="plangrid">
+      <div class="plan">
+        <div class="k">Keepfold</div>
+        <div class="v">Free</div>
+        <ul><li>Cards, exactly as typed</li><li>Every widget size</li><li>Face ID locks</li><li>Folders, archive, Recently Deleted</li></ul>
+      </div>
+      <div class="plan plus">
+        <div class="k">Keepfold Plus</div>
+        <div class="v">99 kr a year, or once for good</div>
+        <ul><li>Unlimited cards</li><li>iCloud sync between iPhone and iPad</li><li>Everything in free</li></ul>
+        <p class="note">Prices vary by country; the App Store shows yours. Export your cards at any time, Plus or not.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="nots wrap rv">
+    <h2>What it doesn’t do.</h2>
+    <ul>
+      <li>No account.<span>Nothing to sign up for. Keepfold works the second it opens.</span></li>
+      <li>No tracking, no ads.<span>The app contains no analytics and talks to no server of ours.</span></li>
+      <li>It is not a password manager.<span>Locks stop a glance, not an attacker. Keep real secrets in a real password manager — and the room number in Keepfold.</span></li>
+    </ul>
+  </section>
+
+  <section class="faq wrap rv">
+    <h2>Questions.</h2>
+    <details><summary>Does it work without iCloud?</summary><p>Yes. Sync is off by default and everything lives on your device. Turn it on if you want your iPad to see the same cards.</p></details>
+    <details><summary>What happens to a card when its day is over?</summary><p>It moves to the archive. Nothing is deleted. Open the archive and tap it to bring it back.</p></details>
+    <details><summary>Can I get my cards out?</summary><p>Yes — export from Settings, whether you have Plus or not. Your data is yours.</p></details>
+    <details><summary>Which languages?</summary><p>English and Swedish. The app follows your iPhone’s language.</p></details>
+  </section>
+
+  <section class="kf-end wrap">
+    <h2>Made in Sweden by one person.</h2>
+    <a class="cta" href="https://apps.apple.com/app/id6810941176">Download on the App Store <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M6 4h6v6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <div class="links">
+      <a href="https://nilssonkristoffe.github.io/keepfold-site/press/">Press kit</a>
+      <a href="https://nilssonkristoffe.github.io/keepfold-site/support/">Support</a>
+      <a href="https://nilssonkristoffe.github.io/keepfold-site/privacy/">Privacy policy</a>
+    </div>
   </section>
 </main>
 <footer class="foot">
