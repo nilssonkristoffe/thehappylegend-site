@@ -3,27 +3,89 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sparvy — The Happy Legend</title>
-<meta name="description" content="One sheet per question. Drag a number and watch the answer change while you drag.">
+<title>Sparvy — Savings, loans and pay after tax</title>
+<meta name="description" content="Sparvy shows what interest does to money — when it works for you and when it works against you. Save, borrow, and in Sweden your salary after tax. No account, no tracking. One price.">
 <link rel="canonical" href="https://thehappylegend.com/sparvy/">
 <meta name="robots" content="index,follow">
 <meta name="theme-color" content="#FFFFFF">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="The Happy Legend">
-<meta property="og:title" content="Sparvy — The Happy Legend">
-<meta property="og:description" content="One sheet per question. Drag a number and watch the answer change while you drag.">
+<meta property="og:title" content="Sparvy — Savings, loans and pay after tax">
+<meta property="og:description" content="Sparvy shows what interest does to money — when it works for you and when it works against you. Save, borrow, and in Sweden your salary after tax. No account, no tracking. One price.">
 <meta property="og:url" content="https://thehappylegend.com/sparvy/">
 <meta property="og:image" content="https://thehappylegend.com/assets/og-sparvy.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Sparvy — The Happy Legend">
-<meta name="twitter:description" content="One sheet per question. Drag a number and watch the answer change while you drag.">
+<meta name="twitter:title" content="Sparvy — Savings, loans and pay after tax">
+<meta name="twitter:description" content="Sparvy shows what interest does to money — when it works for you and when it works against you. Save, borrow, and in Sweden your salary after tax. No account, no tracking. One price.">
 <meta name="twitter:image" content="https://thehappylegend.com/assets/og-sparvy.png">
 <link rel="icon" href="/assets/favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="stylesheet" href="/style.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Sparvy","operatingSystem":"iOS","applicationCategory":"FinanceApplication","url":"https://thehappylegend.com/sparvy/","installUrl":"https://apps.apple.com/app/id6808955275","image":"https://thehappylegend.com/assets/sparvy.png","description":"One sheet per question. Drag a number and watch the answer change while you drag.","author":{"@type":"Organization","name":"The Happy Legend"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Sparvy","operatingSystem":"iOS","applicationCategory":"FinanceApplication","url":"https://thehappylegend.com/sparvy/","installUrl":"https://apps.apple.com/app/id6808955275","image":"https://thehappylegend.com/assets/sparvy.png","description":"Sparvy shows what interest does to money — when it works for you and when it works against you. Save, borrow, and in Sweden your salary after tax. No account, no tracking. One price.","offers":{"@type":"Offer","price":"29","priceCurrency":"SEK"},"author":{"@type":"Organization","name":"The Happy Legend"}}</script>
+<style>
+  .lp{--paper:#F4F3EF;--ink:#161616;--mist:#6B6B67;--line:#E3E1DA;--accent:#161616;--accent2:#333333;--eyebrow:#E8641B;--card:#FFFFFF}
+  .lp{background:var(--paper);color:var(--ink)}
+  .lp .wrap{width:min(1120px,100% - 2*clamp(20px,5vw,64px));margin-inline:auto}
+  .lp-hero{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(32px,6vw,96px);align-items:center;padding-block:clamp(64px,10vh,120px) clamp(48px,8vh,96px)}
+  .lp .eyebrow{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--eyebrow);margin:0 0 18px}
+  .lp h1{margin:0;font-size:clamp(40px,5.6vw,72px);font-weight:600;letter-spacing:-.035em;line-height:1.02;text-wrap:balance}
+  .lp .lede{font-size:clamp(18px,1.7vw,22px);color:var(--mist);margin:20px 0 0;max-width:42ch;text-wrap:pretty}
+  .lp .cta{display:inline-flex;align-items:center;gap:10px;margin-top:28px;padding:14px 22px;border-radius:999px;background:var(--accent);color:#fff;font-size:15px;font-weight:600;transition:transform .35s var(--ease),background .3s var(--ease)}
+  .lp .cta:hover{transform:translateY(-2px);background:var(--accent2)}
+  .lp .cta svg{width:16px;height:16px}
+  .lp .price{margin:14px 0 0;font-size:14px;color:var(--mist)}
+  .phone{display:block;width:100%;height:auto;max-width:340px;margin-inline:auto;border-radius:44px;box-shadow:0 30px 60px -30px rgba(0,0,0,.45);transition:transform .6s var(--ease)}
+  .phone:hover{transform:translateY(-6px)}
+  .lp-hero .phone{max-width:380px}
+  .scene{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,96px);align-items:center;padding-block:clamp(48px,8vh,96px);border-top:1px solid var(--line)}
+  .scene:nth-child(even) .copy{order:2}
+  .scene.solo{grid-template-columns:1fr}
+  .scene.solo .copy{max-width:60ch}
+  .textgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,4vw,56px);padding-block:clamp(48px,8vh,96px);border-top:1px solid var(--line)}
+  .textgrid h2{margin:0;font-size:clamp(22px,2.2vw,28px);font-weight:600;letter-spacing:-.025em;line-height:1.12;text-wrap:balance}
+  .textgrid p{font-size:15px;line-height:1.55;color:var(--mist);margin:12px 0 0}
+  .scene h2{margin:0;font-size:clamp(28px,3.2vw,44px);font-weight:600;letter-spacing:-.03em;line-height:1.08;text-wrap:balance}
+  .scene p{font-size:17px;line-height:1.55;color:var(--mist);max-width:44ch;margin:16px 0 0}
+  .scene .phone{max-width:300px}
+  .pair{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,64px);padding-block:clamp(48px,8vh,96px);border-top:1px solid var(--line)}
+  .pair .cell{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center}
+  .pair .phone{max-width:220px;border-radius:32px}
+  .pair h3{margin:0;font-size:clamp(20px,2vw,26px);font-weight:600;letter-spacing:-.025em;line-height:1.15}
+  .pair p{font-size:15px;line-height:1.5;color:var(--mist);margin:10px 0 0}
+  .plans{padding-block:clamp(48px,8vh,96px);border-top:1px solid var(--line)}
+  .plans h2,.nots h2,.faq h2{margin:0 0 28px;font-size:clamp(26px,3vw,40px);font-weight:600;letter-spacing:-.03em;line-height:1.08}
+  .plangrid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .plan{border:1px solid var(--line);border-radius:20px;padding:26px 26px 28px;background:var(--card)}
+  .plan.plus{background:var(--accent);color:#fff;border-color:var(--accent)}
+  .plan .k{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;opacity:.75}
+  .plan .v{font-size:clamp(24px,2.6vw,34px);font-weight:600;letter-spacing:-.03em;margin:8px 0 14px}
+  .plan ul{margin:0;padding:0;list-style:none}
+  .plan li{padding:8px 0;border-top:1px solid rgba(0,0,0,.08);font-size:15px}
+  .plan.plus li{border-top-color:rgba(255,255,255,.18)}
+  .plan .note{font-size:13px;opacity:.7;margin:14px 0 0}
+  .nots{padding-block:clamp(48px,8vh,96px);border-top:1px solid var(--line)}
+  .nots ul{list-style:none;margin:0;padding:0;border-top:1px solid var(--line);max-width:760px}
+  .nots li{padding:18px 0;border-bottom:1px solid var(--line);font-size:clamp(17px,1.6vw,20px);letter-spacing:-.01em}
+  .nots li span{display:block;font-size:15px;color:var(--mist);margin-top:4px}
+  .faq{padding-block:clamp(48px,8vh,96px);border-top:1px solid var(--line)}
+  .faq details{border-bottom:1px solid var(--line);padding:16px 0}
+  .faq details:first-of-type{border-top:1px solid var(--line)}
+  .faq summary{cursor:pointer;font-size:17px;font-weight:600;letter-spacing:-.01em;list-style:none;display:flex;justify-content:space-between;gap:16px}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"+";color:var(--mist);font-weight:400}
+  .faq details[open] summary::after{content:"–"}
+  .faq details p{margin:10px 0 0;color:var(--mist);font-size:15px;line-height:1.55;max-width:62ch}
+  .lp-end{text-align:center;padding-block:clamp(64px,10vh,120px);border-top:1px solid var(--line)}
+  .lp-end h2{margin:0;font-size:clamp(28px,3.4vw,48px);font-weight:600;letter-spacing:-.03em}
+  .lp-end .links{justify-content:center;margin-top:28px}
+  .lp .links a{color:var(--accent)}
+  @supports (animation-timeline: view()){.lp .rv{animation:reveal 1s var(--ease) both;animation-timeline:view();animation-range:entry 0% entry 40%}}
+  @media (max-width:800px){.lp-hero,.scene,.pair,.plangrid{grid-template-columns:1fr}.scene:nth-child(even) .copy{order:0}.lp-hero{text-align:center}.lp .lede{margin-inline:auto}.pair .cell{grid-template-columns:1fr}.textgrid{grid-template-columns:1fr}.pair .phone{max-width:260px}.scene .phone,.lp-hero .phone{max-width:300px}}
+  @media (prefers-reduced-motion:reduce){.lp .rv{animation:none}.phone,.lp .cta{transition:none}}
+</style>
+
 </head>
 <body>
 <header class="nav">
@@ -39,24 +101,58 @@
     </nav>
   </div>
 </header>
-<main>
+<main class="lp">
 
-  <section class="phero wrap">
-    <span class="iconwrap"><img src="/assets/sparvy.png" alt="Sparvy app icon" width="96" height="96"></span>
-    <h1>Sparvy</h1>
-    <p class="lede">One sheet per question. Drag a number and watch the answer change while you drag.</p>
-    <a class="cta" href="https://apps.apple.com/app/id6808955275">Download on the App Store <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M6 4h6v6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-    <p class="price">One-time purchase. No subscription.</p>
+  <section class="lp-hero wrap">
+    <div class="copy">
+      <p class="eyebrow">Sparvy for iPhone</p>
+      <h1>What interest does to money.</h1>
+      <p class="lede">Drag the monthly amount. Drag the years. Watch the final sum change under your finger — and see what a fee really costs. Then turn the page around and see what a loan does over time.</p>
+      <a class="cta" href="https://apps.apple.com/app/id6808955275">Download on the App Store <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M6 4h6v6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <p class="price">29 kr, once. No ads, no subscription, nothing more to buy.</p>
+    </div>
+    <img class="phone" src="/assets/sparvy/01-save.webp" alt="Sparvy’s Save page on an iPhone: $200 a month for 25 years becomes $184,814 after fees" width="640" height="1353" fetchpriority="high">
   </section>
-  <section class="facts wrap">
-    <h2>What it does</h2>
-    <p>Save: monthly amount, years, return — and what fees actually cost you, in money and in share.</p><p>Borrow: mortgage, car or personal loan. Monthly cost, total interest, extra payments, split rates.</p><p>Pay: what is left after tax, with the real Swedish tax rules for the current year — municipal rate, state tax, the earned-income credit, company car.</p>
-    <h2>What it doesn’t</h2>
-    <p>No account. No server. Nothing leaves your phone.</p><p>It never predicts markets or recommends products. The rate you type is yours.</p><p>No ads, no subscription, nothing more to buy.</p>
-    <h2>Facts</h2>
-    <ul><li>Platform<span>iPhone</span></li><li>Languages<span>English, Swedish, German, Spanish</span></li><li>Availability<span>175 countries</span></li><li>Tax rules<span>Sweden, checked against Skatteverket</span></li></ul>
-    <h2>Links</h2>
-    <div class="links"><a href="https://nilssonkristoffe.github.io/sparvy-site/privacy/">Privacy policy</a><a href="https://nilssonkristoffe.github.io/sparvy-site/support/">Support</a></div>
+
+  <section class="textgrid wrap rv"><div class="cell"><h2>Press play. Watch the years pass.</h2><p>One page. Drag the amount, drag the years, tap the return, add a fee. The sum answers while you drag, and a play button walks through the years one tick at a time. Tap the growth to see how much of it is interest on interest.</p></div><div class="cell"><h2>Borrow: the same page, turned around.</h2><p>Mortgage, car loan or personal loan. Set the rate and the term and see what it costs a month and what the interest adds up to over the years. Annuity or straight amortisation, an extra payment a month, a few interest-free months to start — and the day the loan is gone. Split a mortgage into parts with different rates.</p></div><div class="cell"><h2>In Sweden: your salary after tax.</h2><p>A third page, only in Sweden: gross pay, your municipality, the state tax and the earned-income credit for 2026 — and the company car from your payslip. Checked against Skatteverket’s own calculator.</p></div></section>
+
+  <section class="scene wrap rv">
+    <div class="copy"><h2>History with sources. No promises.</h2><p>The return you type is yours. Sparvy never predicts the market and recommends nothing. The info page shows what history has looked like — the Stockholm exchange since 1974, what funds usually cost — with the sources, so you can set an assumption you believe in.</p></div>
+    <img class="phone" src="/assets/sparvy/02-info.webp" alt="Sparvy’s info page: how Sparvy counts, with sources" width="640" height="1353" loading="lazy">
+  </section>
+
+  <section class="plans wrap rv">
+    <h2>One price.</h2>
+    <div class="plangrid">
+      <div class="plan plus">
+        <div class="k">Sparvy</div>
+        <div class="v">29 kr, once</div>
+        <ul><li>Save, with fees and interest on interest</li><li>Borrow: mortgage, car loan, personal loan</li><li>Salary after tax (Sweden)</li><li>English, Swedish, German, Spanish</li><li>Something hidden behind the sparrow</li></ul>
+        <p class="note">$1.99 / €1.99 outside Sweden. The App Store shows your price.</p>
+      </div>
+      <div class="plan">
+        <div class="k">Your data</div>
+        <div class="v">Stays on your phone</div>
+        <ul><li>No account</li><li>No server, no network calls</li><li>No tracking, no third-party code</li><li>Delete the app and it is gone</li></ul>
+        <p class="note">That is the whole privacy policy.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="nots wrap rv">
+    <h2>What it doesn’t do.</h2>
+    <ul><li>It doesn’t predict anything.<span>The return and the rate are assumptions you enter. Sparvy shows where an assumption leads — not what will happen.</span></li><li>It recommends no products.<span>No funds, no banks, no loans. Education, not advice.</span></li><li>It doesn’t collect a thing.<span>Everything is calculated on your phone. No account, no server, no analytics.</span></li></ul>
+  </section>
+
+  <section class="faq wrap rv">
+    <h2>Questions.</h2>
+    <details><summary>Is the return a forecast?</summary><p>No. It is a number you choose. The info page shows what history has looked like, with sources from Finansinspektionen, Fondbolagens förening and the Riksbank, so you can pick a reasonable one.</p></details><details><summary>Why is Salary only in Sweden?</summary><p>Because the tax rules are Swedish — municipal rate, state tax, the earned-income credit and company-car benefit for 2026, checked against Skatteverket’s calculator. Anywhere else the page would mislead, so it doesn’t show.</p></details><details><summary>Does it work offline?</summary><p>Always. Sparvy makes no network calls at all.</p></details><details><summary>What’s behind the sparrow?</summary><p>Something. Tap it on the info page.</p></details>
+  </section>
+
+  <section class="lp-end wrap">
+    <h2>One page. Then one more.</h2>
+    <a class="cta" href="https://apps.apple.com/app/id6808955275">Download on the App Store <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M6 4h6v6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <div class="links"><a href="https://nilssonkristoffe.github.io/sparvy-site/support/">Support</a><a href="https://nilssonkristoffe.github.io/sparvy-site/privacy/">Privacy policy</a></div>
   </section>
 </main>
 <footer class="foot">
