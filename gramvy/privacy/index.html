@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://thehappylegend.com/gramvy/privacy/">
+<link rel="icon" href="/assets/favicon.png" type="image/png">
+<title>Gramvy — Privacy</title>
+<meta name="description" content="What Gramvy collects about you: nothing. What stays on your device, and the one thing a barcode scan sends.">
+<style>
+  :root{ --bg:#F5F0E6; --card:#FFFFFF; --ink:#1F2124; --dim:#6B6F68; --moss:#3D6642; --mossl:#5C8C5C; --rule:#E2DBCD; }
+  @media (prefers-color-scheme: dark){ :root{ --bg:#1F2124; --card:#2A2D30; --ink:#F2EEE6; --dim:#A3A69E; --moss:#8DB98D; --mossl:#5C8C5C; --rule:#3A3D40; } }
+  *{box-sizing:border-box}
+  body{margin:0; background:var(--bg); color:var(--ink); font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Arial,sans-serif; font-size:17px; line-height:1.6}
+  .wrap{max-width:660px; margin:0 auto; padding:56px 20px 0}
+  a{color:var(--moss)} :focus-visible{outline:2px solid var(--moss); outline-offset:3px}
+  .back{font-size:13px; letter-spacing:.08em; text-transform:uppercase; color:var(--dim); text-decoration:none; display:inline-block; margin-bottom:32px}
+  h1{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Neue",Arial,sans-serif; font-size:clamp(34px,8vw,48px); font-weight:700; letter-spacing:-.025em; line-height:1.05; margin:0; text-wrap:balance}
+  .sub{color:var(--dim); margin-top:10px; font-size:19px}
+  .short{background:var(--card); border:1px solid var(--rule); border-radius:16px; padding:22px 20px; margin-top:30px}
+  .short p{margin:0; font-weight:600; font-size:clamp(19px,4.4vw,23px); line-height:1.3; letter-spacing:-.01em}
+  .short .s{display:block; font-weight:400; font-size:16px; color:var(--dim); margin-top:10px; letter-spacing:0}
+  h2{font-size:13px; letter-spacing:.12em; text-transform:uppercase; color:var(--moss); font-weight:600; margin:42px 0 12px}
+  h3{font-size:18px; font-weight:600; margin:26px 0 6px}
+  p{margin:12px 0} ul{padding-left:20px; margin:12px 0} li{margin:8px 0}
+  .ring{width:56px; height:56px; margin-bottom:20px}
+  footer{border-top:1px solid var(--rule); margin-top:52px; padding:28px 0 60px; color:var(--dim); font-size:14.5px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="/gramvy/">&larr; Gramvy</a>
+  <h1>Privacy</h1>
+  <p class="sub">The short version fits in one sentence.</p>
+  <div class="short">
+    <p>Gramvy collects nothing about you.
+      <span class="s">No account, no email, no name, no location, no advertising, no analytics, no tracking, no third-party code. We have no server that stores anything about you, because we did not build one.</span>
+    </p>
+  </div>
+
+  <h2>What stays on your devices</h2>
+  <p>What you log, the foods you add, your target, your weigh-ins and your settings are stored by the app on your iPhone and, if you use it, your Apple Watch. They are included in your device's own iCloud backup if you have backups turned on. We cannot read any of it. Delete the app, or use Erase everything in Settings, and it is gone.</p>
+
+  <h2>Apple Health is optional</h2>
+  <p>If you turn it on, Gramvy writes the protein you log to Apple Health as dietary protein, and reads your latest body weight to suggest a target and draw your weight trend. Both are separate permissions that you can change at any time in the Health app. What Gramvy reads from Health stays on your device and is never sent anywhere. Gramvy never reads anything else from Health.</p>
+
+  <h2>Scanning a barcode — the one thing that leaves your phone</h2>
+  <p>When you scan a barcode, Gramvy sends that barcode number, and nothing else, to <a href="https://world.openfoodfacts.org">Open Food Facts</a>, a free and open food database, to look up the product. Like any website, their server sees the internet address the request comes from; it does not learn who you are from us. Their handling is described in <a href="https://world.openfoodfacts.org/privacy">their privacy policy</a>. The product is then saved on your phone, so scanning it again does not send anything.</p>
+
+  <h2>Photos never leave your phone</h2>
+  <p>When you photograph a nutrition label, the text is read on your iPhone. When you photograph a plate (on iPhones that support Apple Intelligence), the estimate is made by Apple's on-device model. In both cases the photo is used once, never stored by Gramvy, and never uploaded — not to us, not to Apple's cloud.</p>
+
+  <h2>Notifications</h2>
+  <p>If you start a free trial and allow notifications, Gramvy schedules one local reminder on your phone two days before the trial ends. It is not sent from a server.</p>
+
+  <h2>What Apple tells us</h2>
+  <ul>
+    <li><strong>Sales figures.</strong> Apple reports how many subscriptions and purchases were made, and in which country. We never see who bought them. Payments are handled entirely by Apple.</li>
+    <li><strong>Crash reports</strong>, only if you have chosen to share analytics with developers in your iOS settings. Apple removes the identifying parts before we see them, and we use them for one thing: fixing the crash.</li>
+  </ul>
+
+  <h2>Your rights</h2>
+  <p>Under the GDPR you have the right to access, correct and erase your personal data. We hold none, so there is nothing to hand over or delete — but if you want that confirmed in writing, write to us and you will get it.</p>
+
+  <h2>If this ever changes</h2>
+  <p>If a future version of Gramvy ever collects anything at all, this page is updated before that version ships, with the change written in plain language at the top.</p>
+
+  <h2>Who we are</h2>
+  <p>Gramvy is made by <strong>The Happy Legend</strong> in Sweden. Contact: <a href="mailto:contact@thehappylegend.com">contact@thehappylegend.com</a>.</p>
+
+  <footer><p>Last updated 2 October 2026.</p></footer>
+</div>
+</body>
+</html>
