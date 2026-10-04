@@ -2,9 +2,6 @@
   --bg:#FFFFFF; --card:#F5F5F7; --ink:#1D1D1F; --dim:#6E6E73; --rule:#E3E3E5;
   --koral:#FF5A36; --koraltext:#DE4F1C; --amber:#FFC23D; --teal:#12A594; --natt:#0F0F12;
 }
-@media (prefers-color-scheme: dark){
-  :root{ --bg:#15151A; --card:#1F1F25; --ink:#F2F2F7; --dim:#A3A29E; --rule:#2C2C33; --koraltext:#FF7A5C; }
-}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0; background:var(--bg); color:var(--ink); font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Arial,sans-serif; font-size:17px; line-height:1.6; -webkit-font-smoothing:antialiased}
