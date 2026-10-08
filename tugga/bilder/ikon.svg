@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 100 100">
+<defs>
+<linearGradient id="f" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FF9559"/><stop offset="1" stop-color="#F26A22"/></linearGradient>
+<linearGradient id="d" x1="0.2" y1="0" x2="0.8" y2="1"><stop offset="0" stop-color="#2D2D35"/><stop offset="1" stop-color="#131318"/></linearGradient>
+<filter id="s" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="2.6" stdDeviation="2.6" flood-color="#000" flood-opacity="0.28"/></filter>
+<mask id="m" maskUnits="userSpaceOnUse" x="0" y="0" width="100" height="100"><rect width="100" height="100" fill="#fff"/><circle cx="73" cy="27" r="11" fill="#000"/><circle cx="62" cy="20" r="6.8" fill="#000"/><circle cx="80.5" cy="38.5" r="6.8" fill="#000"/></mask>
+<clipPath id="c"><circle cx="50" cy="50" r="32"/></clipPath>
+</defs>
+<rect width="100" height="100" fill="url(#f)"/>
+<g filter="url(#s)"><g mask="url(#m)"><circle cx="50" cy="50" r="32" fill="url(#d)"/><g clip-path="url(#c)"><ellipse cx="40" cy="36" rx="22" ry="12" fill="#fff" opacity="0.1" transform="rotate(-24 40 36)"/></g></g></g>
+</svg>
