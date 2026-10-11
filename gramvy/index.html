@@ -5,64 +5,377 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="canonical" href="https://thehappylegend.com/gramvy/">
 <link rel="icon" href="/assets/favicon.png" type="image/png">
-<title>Gramvy — protein, counted</title>
-<meta name="description" content="Gramvy counts protein, not calories. Log in two taps on your iPhone or Apple Watch. No account. Made by The Happy Legend in Sweden.">
-<meta property="og:title" content="Gramvy — protein, counted">
-<meta property="og:description" content="Count protein, not calories. Log in two taps on your iPhone or Apple Watch.">
+<link rel="apple-touch-icon" href="/gramvy/ikon.png">
+<title>Gramvy: count protein, not calories</title>
+<meta name="description" content="Gramvy counts protein, not calories. Log in two taps on your iPhone or Apple Watch, fill the gap when you are short, and keep your log on your own devices. No account.">
+<meta name="theme-color" content="#000000">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Gramvy: count protein, not calories">
+<meta property="og:description" content="Log protein in two taps on your iPhone or Apple Watch. No account. Made by The Happy Legend in Sweden.">
 <meta property="og:url" content="https://thehappylegend.com/gramvy/">
 <style>
-  :root{ --bg:#F5F5F7; --card:#FFFFFF; --ink:#1D1D1F; --dim:#6E6E73; --accent:#C2391B; --ring:#FF5A36; --rule:#E5E5EA; }
-  @media (prefers-color-scheme: dark){ :root{ --bg:#000000; --card:#1C1C1E; --ink:#F5F5F7; --dim:#A1A1A6; --accent:#FF7A5C; --ring:#FF5A36; --rule:#2C2C2E; } }
+  :root{
+    --black:#000000; --raised:#1C1C1E; --line:#2C2C2E;
+    --ink:#F5F5F7; --dim:#A1A1A6; --coral:#FF5A36; --coral-text:#FF7A5C;
+    --round: ui-rounded,"SF Pro Rounded",-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+    --display: -apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Neue",Arial,sans-serif;
+    --text: -apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Arial,sans-serif;
+    --ease: cubic-bezier(.22,1,.36,1);
+    color-scheme: dark;
+  }
   *{box-sizing:border-box}
-  body{margin:0; background:var(--bg); color:var(--ink); font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Arial,sans-serif; font-size:17px; line-height:1.6}
-  .wrap{max-width:660px; margin:0 auto; padding:56px 20px 0}
-  a{color:var(--accent)} :focus-visible{outline:2px solid var(--accent); outline-offset:3px}
-  .back{font-size:13px; letter-spacing:.08em; text-transform:uppercase; color:var(--dim); text-decoration:none; display:inline-block; margin-bottom:32px}
-  .icon{width:72px; height:72px; border-radius:16px; display:block; margin-bottom:20px}
-  h1{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Neue",Arial,sans-serif; font-size:clamp(34px,8vw,48px); font-weight:700; letter-spacing:-.025em; line-height:1.05; margin:0; text-wrap:balance}
-  .sub{color:var(--dim); margin-top:10px; font-size:19px}
-  .short{background:var(--card); border:1px solid var(--rule); border-radius:16px; padding:22px 20px; margin-top:30px}
-  .short p{margin:0; font-weight:600; font-size:clamp(19px,4.4vw,23px); line-height:1.3; letter-spacing:-.01em}
-  .short .s{display:block; font-weight:400; font-size:16px; color:var(--dim); margin-top:10px; letter-spacing:0}
-  h2{font-size:13px; letter-spacing:.12em; text-transform:uppercase; color:var(--accent); font-weight:600; margin:42px 0 12px}
-  p{margin:12px 0} ul{padding-left:20px; margin:12px 0} li{margin:8px 0}
-  .tag{font-size:13px; font-weight:600; color:var(--accent); white-space:nowrap}
-  footer{border-top:1px solid var(--rule); margin-top:52px; padding:28px 0 60px; color:var(--dim); font-size:14.5px}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0; background:var(--black); color:var(--ink); font-family:var(--text); font-size:18px; line-height:1.55; -webkit-font-smoothing:antialiased}
+  a{color:var(--coral-text); text-underline-offset:3px}
+  :focus-visible{outline:2px solid var(--coral-text); outline-offset:3px; border-radius:6px}
+  img{display:block; max-width:100%; height:auto}
+  .wrap{max-width:1120px; margin:0 auto; padding:0 24px}
+  .g{font-family:var(--round); font-variant-numeric:tabular-nums; white-space:nowrap}
+
+  /* Navigation */
+  .nav{position:sticky; top:0; z-index:5; background:rgba(0,0,0,.72); -webkit-backdrop-filter:saturate(180%) blur(20px); backdrop-filter:saturate(180%) blur(20px); border-bottom:1px solid rgba(255,255,255,.06)}
+  .nav .wrap{display:flex; align-items:center; gap:28px; height:60px}
+  .brand{display:flex; align-items:center; gap:10px; color:var(--ink); text-decoration:none; font-family:var(--display); font-weight:600; font-size:19px; letter-spacing:-.01em}
+  .brand img{width:30px; height:30px; border-radius:7px}
+  .nav ul{display:flex; gap:24px; list-style:none; margin:0 0 0 auto; padding:0}
+  .nav ul a{color:var(--dim); text-decoration:none; font-size:15px}
+  .nav ul a:hover{color:var(--ink)}
+  .pill{font-size:14px; color:var(--ink); border:1px solid #3A3A3C; border-radius:999px; padding:7px 14px; white-space:nowrap}
+  .pill i{display:inline-block; width:7px; height:7px; border-radius:50%; background:#FFB340; margin-right:8px; vertical-align:1px}
+
+  /* Hero */
+  .hero{position:relative; overflow:hidden}
+  .hero .wrap{display:grid; grid-template-columns:1.15fr .85fr; align-items:center; gap:40px; min-height:min(820px,calc(100vh - 60px)); padding-top:56px; padding-bottom:72px}
+  h1{font-family:var(--display); font-weight:700; font-size:clamp(44px,5.7vw,84px); line-height:1; letter-spacing:-.045em; margin:0}
+  h1 span{display:block; white-space:nowrap}
+  h1 .dim{color:#5A5A5E}
+  .lede{font-size:clamp(19px,1.7vw,22px); color:var(--dim); max-width:31em; margin:28px 0 0; line-height:1.45}
+  .lede strong{color:var(--ink); font-weight:600}
+  .status{margin-top:36px; display:flex; flex-direction:column; gap:6px; font-size:15.5px; color:var(--dim); max-width:34em}
+  .status b{color:var(--ink); font-weight:600}
+
+  .stage{position:relative; justify-self:center; width:min(420px,100%); aspect-ratio:420/640}
+  .stage::before{content:""; position:absolute; inset:-30% -40%; background:radial-gradient(closest-side, rgba(255,90,54,.42), rgba(255,90,54,.12) 55%, transparent 75%); pointer-events:none}
+  .phone{position:absolute; right:0; top:0; width:76%; border-radius:15.5% / 7.2%; background:#000; padding:3.2%; box-shadow:0 0 0 1.5px #3A3A3C, 0 40px 80px rgba(0,0,0,.65)}
+  .phone img{border-radius:12.5% / 5.8%}
+  .phone::after{content:""; position:absolute; top:4.6%; left:50%; width:30%; height:3.9%; transform:translateX(-50%); background:#000; border-radius:999px}
+  .watch{position:absolute; left:0; bottom:2%; width:41%; padding:4.5%; background:#000; border-radius:28%; box-shadow:0 0 0 5px #2A2A2D, 0 0 0 6.5px #48484C, 0 30px 60px rgba(0,0,0,.7)}
+  .watch img{border-radius:20%}
+  .watch::after{content:""; position:absolute; right:-9.5%; top:26%; width:6%; height:20%; background:#3A3A3E; border-radius:4px}
+
+  /* Sections */
+  section.band{padding:120px 0}
+  h2{font-family:var(--display); font-weight:700; font-size:clamp(34px,4.6vw,56px); line-height:1.04; letter-spacing:-.035em; margin:0; text-wrap:balance}
+  .intro{color:var(--dim); font-size:clamp(18px,1.5vw,20px); max-width:32em; margin:20px 0 0}
+  .split{display:grid; grid-template-columns:1fr 1fr; gap:72px; align-items:center}
+  .tag{font-size:12.5px; font-weight:600; color:var(--coral-text); border:1px solid rgba(255,122,92,.45); border-radius:999px; padding:2px 8px; margin-left:8px; vertical-align:3px; letter-spacing:.02em}
+  .tag.free{color:var(--dim); border-color:#48484A}
+
+  /* The day ledger */
+  .ledger{background:var(--raised); border-radius:28px; padding:28px 28px 22px}
+  .ledger-head{display:flex; align-items:center; gap:22px; margin-bottom:10px}
+  .ring{width:112px; height:112px; flex:none; position:relative}
+  .ring svg{width:100%; height:100%; transform:rotate(-90deg)}
+  .ring circle{fill:none; stroke-width:11}
+  .ring .track{stroke:rgba(255,90,54,.18)}
+  .ring .arc{stroke:var(--coral); stroke-linecap:round; transition:stroke-dashoffset .7s var(--ease)}
+  .ring .sum{position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-family:var(--round); font-weight:700; font-size:30px; letter-spacing:-.02em}
+  .ring .sum small{font-size:15px; font-weight:600; margin-left:1px}
+  .ledger-head h3{font-family:var(--display); font-size:22px; line-height:1.2; letter-spacing:-.015em; margin:0}
+  .ledger-head p{margin:4px 0 0; color:var(--dim); font-size:15px}
+  .ledger ol{list-style:none; margin:0; padding:0}
+  .ledger li{display:grid; grid-template-columns:1fr auto; align-items:baseline; gap:4px 16px; padding:14px 0; border-top:1px solid var(--line); transition:opacity .5s var(--ease), transform .5s var(--ease)}
+  .ledger .meal{grid-column:1 / -1; font-size:13px; color:var(--dim)}
+  .ledger .food{font-size:17px}
+  .ledger .food span{color:var(--dim); font-size:15px; margin-left:6px}
+  .ledger .p{font-family:var(--round); font-weight:700; color:var(--coral-text); font-size:19px}
+  .ledger .total{border-top:1px solid #3A3A3C}
+  .ledger .total .food{font-weight:600}
+  .ledger .total .p{color:var(--ink)}
+  .ledger .note{color:var(--dim); font-size:14px; margin:12px 0 0}
+  .js-anim .ledger li.wait{opacity:0; transform:translateY(8px)}
+
+  .goals{list-style:none; margin:28px 0 0; padding:0; display:flex; flex-wrap:wrap; gap:10px}
+  .goals li{border:1px solid #3A3A3C; border-radius:999px; padding:8px 16px; font-size:16px; color:var(--ink)}
+
+  /* Ways to log */
+  .ways{display:grid; grid-template-columns:repeat(3,1fr); gap:48px; margin-top:64px}
+  .ways h3{font-family:var(--display); font-size:24px; letter-spacing:-.02em; margin:0 0 10px; line-height:1.2}
+  .ways p{margin:0; color:var(--dim); font-size:17px}
+  .wrist{display:grid; grid-template-columns:auto 1fr; gap:64px; align-items:center; margin-top:96px}
+  .wrist .watch{position:relative; left:auto; bottom:auto; width:230px}
+  .wrist blockquote{margin:0; font-family:var(--display); font-size:clamp(26px,3vw,36px); line-height:1.15; letter-spacing:-.025em; max-width:18em}
+  .wrist blockquote span{color:var(--dim)}
+
+  /* Fill the gap */
+  .gap-art{display:flex; flex-direction:column; align-items:center; gap:40px}
+  .gap-art .watch{position:relative; left:auto; bottom:auto; width:250px}
+  .notif{width:min(380px,100%); background:rgba(58,58,60,.72); -webkit-backdrop-filter:blur(30px); backdrop-filter:blur(30px); border-radius:22px; padding:14px 16px; display:grid; grid-template-columns:auto 1fr auto; gap:2px 12px; align-items:center; box-shadow:0 20px 50px rgba(0,0,0,.5)}
+  .notif img{width:38px; height:38px; border-radius:9px; grid-row:1 / 3}
+  .notif b{font-size:15px; font-weight:600}
+  .notif time{font-size:13px; color:#B0B0B5}
+  .notif p{grid-column:2 / 4; margin:0; font-size:15px; line-height:1.3}
+  .feature + .feature{margin-top:48px}
+  .feature h3{font-family:var(--display); font-size:26px; letter-spacing:-.02em; margin:0 0 10px; line-height:1.2}
+  .feature p{margin:0; color:var(--dim)}
+
+  /* Free and Plus */
+  .tiers{display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-top:56px}
+  .tier{border-radius:28px; padding:36px 34px}
+  .tier.free{border:1px solid var(--line)}
+  .tier.plus{background:linear-gradient(160deg, rgba(255,90,54,.16), rgba(255,90,54,.04) 60%), var(--raised)}
+  .tier h3{font-family:var(--display); font-size:28px; letter-spacing:-.02em; margin:0}
+  .tier .sub{color:var(--dim); margin:6px 0 22px; font-size:16px}
+  .tier ul{margin:0; padding:0; list-style:none}
+  .tier li{padding:9px 0 9px 26px; position:relative; font-size:17px}
+  .tier li::before{content:""; position:absolute; left:0; top:17px; width:12px; height:12px; border-radius:50%; border:2px solid var(--coral)}
+  .tier.free li::before{border-color:#636366}
+  .prices{margin:26px 0 0; padding:22px 0 0; border-top:1px solid rgba(255,255,255,.1); display:grid; gap:6px}
+  .prices div{display:flex; justify-content:space-between; gap:16px; font-size:16.5px}
+  .prices .g{font-weight:700}
+  .fine{color:var(--dim); font-size:15px; margin:22px 0 0; max-width:46em}
+
+  /* Privacy */
+  .privacy .big{font-family:var(--display); font-weight:700; font-size:clamp(34px,4.6vw,56px); letter-spacing:-.035em; line-height:1.04; margin:0; max-width:17em}
+  .facts{display:grid; grid-template-columns:repeat(3,1fr); gap:48px; margin-top:56px}
+  .facts h3{font-size:18px; margin:0 0 8px; font-weight:600}
+  .facts p{margin:0; color:var(--dim); font-size:16.5px}
+
+  footer{border-top:1px solid var(--line); padding:40px 0 64px; color:var(--dim); font-size:15px}
+  footer .wrap{display:flex; flex-wrap:wrap; justify-content:space-between; gap:16px 32px}
+  footer ul{list-style:none; display:flex; gap:22px; margin:0; padding:0}
+  footer a{color:var(--dim)}
+  footer a:hover{color:var(--ink)}
+
+  /* Page-load: the hero only */
+  @media (prefers-reduced-motion:no-preference){
+    .stage{animation:rise 1.1s var(--ease) .15s both}
+    @keyframes rise{from{opacity:0; transform:translateY(24px)}to{opacity:1; transform:none}}
+  }
+  @media (prefers-reduced-motion:reduce){ .ring .arc, .ledger li{transition:none} }
+
+  @media (max-width:900px){
+    .nav ul{display:none}
+    .nav .pill{margin-left:auto}
+    .hero .wrap{grid-template-columns:1fr; min-height:0; padding-top:44px; gap:56px}
+    .stage{width:min(380px,92%)}
+    section.band{padding:88px 0}
+    .split{grid-template-columns:1fr; gap:48px}
+    .ways{grid-template-columns:1fr; gap:32px; margin-top:44px}
+    .wrist{grid-template-columns:1fr; gap:40px; margin-top:64px}
+    .wrist .watch{width:200px}
+    .tiers{grid-template-columns:1fr}
+    .facts{grid-template-columns:1fr; gap:28px}
+  }
+  @media (max-width:420px){
+    .wrap{padding:0 16px}
+    .pill{font-size:13px; padding:6px 11px}
+    .ledger{padding:22px 18px 18px; border-radius:24px}
+    .ring{width:92px; height:92px}
+    .ring .sum{font-size:25px}
+    .tier{padding:28px 22px}
+  }
 </style>
 </head>
 <body>
-<div class="wrap">
-  <a class="back" href="/">&larr; The Happy Legend</a>
-  <img class="icon" src="/gramvy/ikon.png" alt="Gramvy app icon" width="72" height="72">
-  <h1>Gramvy</h1>
-  <p class="sub">Count protein, not calories.</p>
-  <div class="short">
-    <p>A protein tracker for people who lift.
-      <span class="s">Log in two taps on your iPhone or Apple Watch. Scan a barcode, photograph a nutrition label, or pick from nearly 200 everyday foods with sourced protein values. No account. Your log stays on your devices.</span>
-    </p>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="/gramvy/"><img src="/gramvy/ikon.png" alt="" width="30" height="30">Gramvy</a>
+    <ul>
+      <li><a href="#goal">How it works</a></li>
+      <li><a href="#gap">Fill the gap</a></li>
+      <li><a href="#plus">Free and Plus</a></li>
+      <li><a href="#privacy">Privacy</a></li>
+    </ul>
+    <span class="pill" id="hamta"><i></i>In review at Apple</span>
   </div>
+</header>
 
-  <h2>What it does</h2>
-  <ul>
-    <li>Pick your goal in plain words. Gramvy shows it in grams for your body weight, with the reference values and their sources.</li>
-    <li>Log your favourites from Apple Watch in two taps, and see grams left on your watch face. <span class="tag">Plus</span></li>
-    <li>Fill the gap: when you are short, Gramvy suggests foods you already eat, with the amount that closes it. One tap logs it. <span class="tag">Plus</span></li>
-    <li>An evening reminder at a time you choose, only on days you have not reached your goal. Off until you turn it on.</li>
-    <li>Writes your protein to Apple Health, if you want it to.</li>
-  </ul>
+<main>
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <h1><span>Count protein,</span><span class="dim">not calories.</span></h1>
+      <p class="lede">Gramvy counts one number: <strong>grams of protein</strong>. Log in two taps on your iPhone or Apple Watch, and see what is left at a glance.</p>
+      <div class="status">
+        <span><b>Sent to Apple for review on 9 October 2026.</b> This page will link to the App Store the day it is out.</span>
+        <span>Free to start. Gramvy Plus is $39.99 a year, with 7 days free.</span>
+      </div>
+    </div>
+    <div class="stage" aria-label="Gramvy on iPhone and Apple Watch: 88 of 160 grams, 72 grams left">
+      <div class="phone"><img src="/gramvy/bilder/idag.webp" alt="Gramvy on iPhone: 88 of 160 g protein, 72 g left, with Log protein and Fill the gap" width="640" height="1391"></div>
+      <div class="watch"><img src="/gramvy/bilder/klocka-idag.webp" alt="Gramvy on Apple Watch: 88 g, 72 g left" width="368" height="448"></div>
+    </div>
+  </div>
+</section>
 
-  <h2>Free and Plus</h2>
-  <p>Free, for good: Just the grams, three saved foods, the ring, the last 7 days, widgets, Apple Health, Siri and the evening reminder. Gramvy Plus adds food search, barcode and label scanning, unlimited saved foods, the Apple Watch app, Fill the gap, full history and the weight trend. The yearly plan starts with 7 days free. Prices for your country are shown in the App Store and in the app before you buy.</p>
+<section class="band" id="goal">
+  <div class="wrap split">
+    <div>
+      <h2>Your goal, in grams.</h2>
+      <p class="intro">Pick a goal in plain words and Gramvy turns it into grams for your body weight. The reference values, like 1.6 g per kilo, come with their sources. Then it shows you what a day like that can look like.</p>
+      <ul class="goals" aria-label="Goals to choose from">
+        <li>Lose fat, keep muscle</li>
+        <li>Build or keep muscle</li>
+        <li>Stay active</li>
+        <li>Set my own number</li>
+      </ul>
+    </div>
+    <div class="ledger" id="ledger">
+      <div class="ledger-head">
+        <div class="ring" aria-hidden="true">
+          <svg viewBox="0 0 120 120"><circle class="track" cx="60" cy="60" r="50"/><circle class="arc" cx="60" cy="60" r="50" pathLength="128" stroke-dasharray="128" stroke-dashoffset="0"/></svg>
+          <span class="sum"><span><span id="sum">128</span><small>g</small></span></span>
+        </div>
+        <div>
+          <h3>Here's what 128 g looks like</h3>
+          <p>Four meals from the list. Swap any of them later.</p>
+        </div>
+      </div>
+      <ol>
+        <li data-g="32"><span class="meal">Breakfast</span><span class="food">Quark <span>290 g</span></span><span class="p g">32 g</span></li>
+        <li data-g="33"><span class="meal">Lunch</span><span class="food">Chicken breast, cooked <span>105 g</span></span><span class="p g">33 g</span></li>
+        <li data-g="31"><span class="meal">After training</span><span class="food">Whey protein in 250 ml milk <span>30 g</span></span><span class="p g">31 g</span></li>
+        <li data-g="32"><span class="meal">Dinner</span><span class="food">Salmon, cooked <span>145 g</span></span><span class="p g">32 g</span></li>
+        <li class="total"><span class="food">All day</span><span class="p g">128 g</span></li>
+      </ol>
+      <p class="note">From the app's intro, for a 128 g goal. You log what you actually eat, in grams.</p>
+    </div>
+  </div>
+</section>
 
-  <h2>Status</h2>
-  <p>Gramvy was sent to Apple for review on 9 October 2026. This page will link to the App Store the day it is out.</p>
+<section class="band" id="log">
+  <div class="wrap">
+    <h2>Log it the way you eat it.</h2>
+    <p class="intro">Portions you actually eat, like a tub, two eggs or a glass of milk, in g, ml or dl. Nearly 200 everyday foods with protein values from USDA FoodData Central and the Swedish Food Agency.</p>
+    <div class="ways">
+      <div>
+        <h3>From your wrist <span class="tag">Plus</span></h3>
+        <p>Tap a favourite on Apple Watch and the ring moves. Grams left sit on your watch face.</p>
+      </div>
+      <div>
+        <h3>Scan or snap <span class="tag">Plus</span></h3>
+        <p>Scan a barcode, or photograph the nutrition label. The label is read on your iPhone, and the photo is never stored.</p>
+      </div>
+      <div>
+        <h3>Just the grams <span class="tag free">Free</span></h3>
+        <p>Already know the number? Type it. Or say "Log protein in Gramvy" to Siri.</p>
+      </div>
+    </div>
+    <div class="wrist">
+      <div class="watch"><img src="/gramvy/bilder/klocka-favoriter.webp" alt="Gramvy favourites on Apple Watch: chicken breast 47 g, egg 7 g, quark 17 g" width="368" height="448" loading="lazy"></div>
+      <blockquote>Open Gramvy on your watch, tap a favourite. <span>That is the whole log, between sets or on the way out of the kitchen.</span></blockquote>
+    </div>
+  </div>
+</section>
 
-  <h2>More</h2>
-  <ul>
-    <li><a href="/gramvy/privacy/">Privacy</a></li>
-    <li><a href="/gramvy/support/">Support</a></li>
-  </ul>
-  <footer><p>Gramvy is made by The Happy Legend in Sweden. It counts grams; it does not give nutrition or medical advice.</p></footer>
-</div>
+<section class="band" id="gap">
+  <div class="wrap split">
+    <div>
+      <h2>When the day falls short.</h2>
+      <div class="feature" style="margin-top:36px">
+        <h3>Fill the gap <span class="tag">Plus</span></h3>
+        <p>Gramvy suggests up to three foods you already eat, with the amount that closes the gap, rounded up to the nearest 5 g. One tap logs it, on your iPhone or your Apple Watch.</p>
+      </div>
+      <div class="feature">
+        <h3>An evening reminder <span class="tag free">Free</span></h3>
+        <p>At a time you choose, and only on days you have not reached your goal. No streaks, no guilt. It is off until you turn it on.</p>
+      </div>
+    </div>
+    <div class="gap-art">
+      <div class="notif" role="img" aria-label="Notification from Gramvy: 72 g left to today's target.">
+        <img src="/gramvy/ikon.png" alt="" width="38" height="38">
+        <b>Gramvy</b><time>19:00</time>
+        <p>72 g left to today's target.</p>
+      </div>
+      <div class="watch"><img src="/gramvy/bilder/klocka-fyll-gapet.webp" alt="Fill the gap on Apple Watch: chicken breast 235 g gives 73 g, salmon 330 g gives 73 g" width="368" height="448" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="plus">
+  <div class="wrap">
+    <h2>Free for good. Plus when you want more.</h2>
+    <div class="tiers">
+      <div class="tier free">
+        <h3>Free</h3>
+        <p class="sub">No trial, no time limit.</p>
+        <ul>
+          <li>Just the grams</li>
+          <li>Three saved foods</li>
+          <li>The ring and the last 7 days</li>
+          <li>Widgets for Home and Lock Screen</li>
+          <li>Apple Health and Siri</li>
+          <li>The evening reminder</li>
+        </ul>
+      </div>
+      <div class="tier plus">
+        <h3>Gramvy Plus</h3>
+        <p class="sub">Everything in Free, and:</p>
+        <ul>
+          <li>The Apple Watch app</li>
+          <li>Fill the gap</li>
+          <li>Food search, barcode and label scanning</li>
+          <li>Unlimited saved foods</li>
+          <li>Full history and the weight trend</li>
+        </ul>
+        <div class="prices">
+          <div><span>Yearly, 7 days free</span><span class="g">$39.99</span></div>
+          <div><span>Monthly</span><span class="g">$6.99</span></div>
+          <div><span>Once, for good</span><span class="g">$79.99</span></div>
+        </div>
+      </div>
+    </div>
+    <p class="fine">Prices are in US dollars; the App Store shows the price in your country before you buy. If you allow notifications, Gramvy reminds you two days before the free week ends. Cancel any time in your Apple account. If Plus ends, nothing you logged is deleted.</p>
+  </div>
+</section>
+
+<section class="band privacy" id="privacy">
+  <div class="wrap">
+    <p class="big">Gramvy collects nothing about you.</p>
+    <div class="facts">
+      <div><h3>No account</h3><p>Nothing to sign up for, no email, no tracking, no ads. We have no server that stores anything about you.</p></div>
+      <div><h3>Your log stays with you</h3><p>On your iPhone and Apple Watch, and in Apple Health if you turn that on.</p></div>
+      <div><h3>One thing leaves your phone</h3><p>A barcode scan sends the barcode number to Open Food Facts to look up the product. Nothing else. <a href="/gramvy/privacy/">Read the privacy policy</a></p></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Gramvy is made by The Happy Legend in Sweden. It counts grams; it does not give nutrition or medical advice.</span>
+    <ul>
+      <li><a href="/gramvy/support/">Support</a></li>
+      <li><a href="/gramvy/privacy/">Privacy</a></li>
+      <li><a href="/">The Happy Legend</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var ledger=document.getElementById('ledger');
+  if(!ledger||!('IntersectionObserver' in window)) return;
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var rows=[].slice.call(ledger.querySelectorAll('li')), arc=ledger.querySelector('.arc'), sum=document.getElementById('sum');
+  document.documentElement.classList.add('js-anim');
+  rows.forEach(function(r){r.classList.add('wait')});
+  arc.style.transition='none'; arc.setAttribute('stroke-dashoffset','128'); sum.textContent='0';
+  arc.getBoundingClientRect(); arc.style.transition='';
+  var io=new IntersectionObserver(function(e){
+    if(!e[0].isIntersecting) return; io.disconnect();
+    var total=0;
+    rows.forEach(function(r,i){
+      setTimeout(function(){
+        r.classList.remove('wait');
+        var g=parseInt(r.getAttribute('data-g')||'0',10);
+        if(g){ total+=g; arc.setAttribute('stroke-dashoffset', String(128-total)); sum.textContent=String(total); }
+      }, 250+i*420);
+    });
+  },{threshold:.45});
+  io.observe(ledger);
+})();
+</script>
 </body>
 </html>
