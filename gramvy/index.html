@@ -6,46 +6,63 @@
 <link rel="canonical" href="https://thehappylegend.com/gramvy/">
 <link rel="icon" href="/assets/favicon.png" type="image/png">
 <title>Gramvy — protein, counted</title>
-<meta name="description" content="Gramvy counts protein, not calories. Log in two taps on your iPhone or Apple Watch. Made by The Happy Legend.">
+<meta name="description" content="Gramvy counts protein, not calories. Log in two taps on your iPhone or Apple Watch. No account. Made by The Happy Legend in Sweden.">
+<meta property="og:title" content="Gramvy — protein, counted">
+<meta property="og:description" content="Count protein, not calories. Log in two taps on your iPhone or Apple Watch.">
+<meta property="og:url" content="https://thehappylegend.com/gramvy/">
 <style>
-  :root{ --bg:#F5F0E6; --card:#FFFFFF; --ink:#1F2124; --dim:#6B6F68; --moss:#3D6642; --mossl:#5C8C5C; --rule:#E2DBCD; }
-  @media (prefers-color-scheme: dark){ :root{ --bg:#1F2124; --card:#2A2D30; --ink:#F2EEE6; --dim:#A3A69E; --moss:#8DB98D; --mossl:#5C8C5C; --rule:#3A3D40; } }
+  :root{ --bg:#F5F5F7; --card:#FFFFFF; --ink:#1D1D1F; --dim:#6E6E73; --accent:#C2391B; --ring:#FF5A36; --rule:#E5E5EA; }
+  @media (prefers-color-scheme: dark){ :root{ --bg:#000000; --card:#1C1C1E; --ink:#F5F5F7; --dim:#A1A1A6; --accent:#FF7A5C; --ring:#FF5A36; --rule:#2C2C2E; } }
   *{box-sizing:border-box}
   body{margin:0; background:var(--bg); color:var(--ink); font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Arial,sans-serif; font-size:17px; line-height:1.6}
   .wrap{max-width:660px; margin:0 auto; padding:56px 20px 0}
-  a{color:var(--moss)} :focus-visible{outline:2px solid var(--moss); outline-offset:3px}
+  a{color:var(--accent)} :focus-visible{outline:2px solid var(--accent); outline-offset:3px}
   .back{font-size:13px; letter-spacing:.08em; text-transform:uppercase; color:var(--dim); text-decoration:none; display:inline-block; margin-bottom:32px}
+  .icon{width:72px; height:72px; border-radius:16px; display:block; margin-bottom:20px}
   h1{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Neue",Arial,sans-serif; font-size:clamp(34px,8vw,48px); font-weight:700; letter-spacing:-.025em; line-height:1.05; margin:0; text-wrap:balance}
   .sub{color:var(--dim); margin-top:10px; font-size:19px}
   .short{background:var(--card); border:1px solid var(--rule); border-radius:16px; padding:22px 20px; margin-top:30px}
   .short p{margin:0; font-weight:600; font-size:clamp(19px,4.4vw,23px); line-height:1.3; letter-spacing:-.01em}
   .short .s{display:block; font-weight:400; font-size:16px; color:var(--dim); margin-top:10px; letter-spacing:0}
-  h2{font-size:13px; letter-spacing:.12em; text-transform:uppercase; color:var(--moss); font-weight:600; margin:42px 0 12px}
-  h3{font-size:18px; font-weight:600; margin:26px 0 6px}
+  h2{font-size:13px; letter-spacing:.12em; text-transform:uppercase; color:var(--accent); font-weight:600; margin:42px 0 12px}
   p{margin:12px 0} ul{padding-left:20px; margin:12px 0} li{margin:8px 0}
-  .ring{width:56px; height:56px; margin-bottom:20px}
+  .tag{font-size:13px; font-weight:600; color:var(--accent); white-space:nowrap}
   footer{border-top:1px solid var(--rule); margin-top:52px; padding:28px 0 60px; color:var(--dim); font-size:14.5px}
 </style>
 </head>
 <body>
 <div class="wrap">
   <a class="back" href="/">&larr; The Happy Legend</a>
-  <svg class="ring" viewBox="0 0 56 56" aria-hidden="true"><circle cx="28" cy="28" r="22" fill="none" stroke="var(--rule)" stroke-width="7"/><circle cx="28" cy="28" r="22" fill="none" stroke="var(--mossl)" stroke-width="7" stroke-linecap="round" stroke-dasharray="99.5 138.2" transform="rotate(-90 28 28)"/></svg>
+  <img class="icon" src="/gramvy/ikon.png" alt="Gramvy app icon" width="72" height="72">
   <h1>Gramvy</h1>
   <p class="sub">Count protein, not calories.</p>
   <div class="short">
     <p>A protein tracker for people who lift.
-      <span class="s">Log in two taps on your iPhone or Apple Watch. Scan a barcode, photograph a nutrition label, or pick from a list of everyday foods with sourced protein values. No account. Your data stays on your devices.</span>
+      <span class="s">Log in two taps on your iPhone or Apple Watch. Scan a barcode, photograph a nutrition label, or pick from nearly 200 everyday foods with sourced protein values. No account. Your log stays on your devices.</span>
     </p>
   </div>
+
+  <h2>What it does</h2>
+  <ul>
+    <li>Pick your goal in plain words. Gramvy shows it in grams for your body weight, with the reference values and their sources.</li>
+    <li>Log your favourites from Apple Watch in two taps, and see grams left on your watch face. <span class="tag">Plus</span></li>
+    <li>Fill the gap: when you are short, Gramvy suggests foods you already eat, with the amount that closes it. One tap logs it. <span class="tag">Plus</span></li>
+    <li>An evening reminder at a time you choose, only on days you have not reached your goal. Off until you turn it on.</li>
+    <li>Writes your protein to Apple Health, if you want it to.</li>
+  </ul>
+
+  <h2>Free and Plus</h2>
+  <p>Free, for good: Just the grams, three saved foods, the ring, the last 7 days, widgets, Apple Health, Siri and the evening reminder. Gramvy Plus adds food search, barcode and label scanning, unlimited saved foods, the Apple Watch app, Fill the gap, full history and the weight trend. The yearly plan starts with 7 days free. Prices for your country are shown in the App Store and in the app before you buy.</p>
+
   <h2>Status</h2>
-  <p>Gramvy is in testing and not yet on the App Store. This page will link to it the day it is.</p>
+  <p>Gramvy was sent to Apple for review on 9 October 2026. This page will link to the App Store the day it is out.</p>
+
   <h2>More</h2>
   <ul>
     <li><a href="/gramvy/privacy/">Privacy</a></li>
     <li><a href="/gramvy/support/">Support</a></li>
   </ul>
-  <footer><p>Gramvy is made by The Happy Legend in Sweden.</p></footer>
+  <footer><p>Gramvy is made by The Happy Legend in Sweden. It counts grams; it does not give nutrition or medical advice.</p></footer>
 </div>
 </body>
 </html>

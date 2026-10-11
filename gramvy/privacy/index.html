@@ -8,22 +8,20 @@
 <title>Gramvy — Privacy</title>
 <meta name="description" content="What Gramvy collects about you: nothing. What stays on your device, and the one thing a barcode scan sends.">
 <style>
-  :root{ --bg:#F5F0E6; --card:#FFFFFF; --ink:#1F2124; --dim:#6B6F68; --moss:#3D6642; --mossl:#5C8C5C; --rule:#E2DBCD; }
-  @media (prefers-color-scheme: dark){ :root{ --bg:#1F2124; --card:#2A2D30; --ink:#F2EEE6; --dim:#A3A69E; --moss:#8DB98D; --mossl:#5C8C5C; --rule:#3A3D40; } }
+  :root{ --bg:#F5F5F7; --card:#FFFFFF; --ink:#1D1D1F; --dim:#6E6E73; --accent:#C2391B; --rule:#E5E5EA; }
+  @media (prefers-color-scheme: dark){ :root{ --bg:#000000; --card:#1C1C1E; --ink:#F5F5F7; --dim:#A1A1A6; --accent:#FF7A5C; --rule:#2C2C2E; } }
   *{box-sizing:border-box}
   body{margin:0; background:var(--bg); color:var(--ink); font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Arial,sans-serif; font-size:17px; line-height:1.6}
   .wrap{max-width:660px; margin:0 auto; padding:56px 20px 0}
-  a{color:var(--moss)} :focus-visible{outline:2px solid var(--moss); outline-offset:3px}
+  a{color:var(--accent)} :focus-visible{outline:2px solid var(--accent); outline-offset:3px}
   .back{font-size:13px; letter-spacing:.08em; text-transform:uppercase; color:var(--dim); text-decoration:none; display:inline-block; margin-bottom:32px}
   h1{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Neue",Arial,sans-serif; font-size:clamp(34px,8vw,48px); font-weight:700; letter-spacing:-.025em; line-height:1.05; margin:0; text-wrap:balance}
   .sub{color:var(--dim); margin-top:10px; font-size:19px}
   .short{background:var(--card); border:1px solid var(--rule); border-radius:16px; padding:22px 20px; margin-top:30px}
   .short p{margin:0; font-weight:600; font-size:clamp(19px,4.4vw,23px); line-height:1.3; letter-spacing:-.01em}
   .short .s{display:block; font-weight:400; font-size:16px; color:var(--dim); margin-top:10px; letter-spacing:0}
-  h2{font-size:13px; letter-spacing:.12em; text-transform:uppercase; color:var(--moss); font-weight:600; margin:42px 0 12px}
-  h3{font-size:18px; font-weight:600; margin:26px 0 6px}
+  h2{font-size:13px; letter-spacing:.12em; text-transform:uppercase; color:var(--accent); font-weight:600; margin:42px 0 12px}
   p{margin:12px 0} ul{padding-left:20px; margin:12px 0} li{margin:8px 0}
-  .ring{width:56px; height:56px; margin-bottom:20px}
   footer{border-top:1px solid var(--rule); margin-top:52px; padding:28px 0 60px; color:var(--dim); font-size:14.5px}
 </style>
 </head>
@@ -48,10 +46,13 @@
   <p>When you scan a barcode, Gramvy sends that barcode number, and nothing else, to <a href="https://world.openfoodfacts.org">Open Food Facts</a>, a free and open food database, to look up the product. Like any website, their server sees the internet address the request comes from; it does not learn who you are from us. Their handling is described in <a href="https://world.openfoodfacts.org/privacy">their privacy policy</a>. The product is then saved on your phone, so scanning it again does not send anything.</p>
 
   <h2>Photos never leave your phone</h2>
-  <p>When you photograph a nutrition label, the text is read on your iPhone. When you photograph a plate (on iPhones that support Apple Intelligence), the estimate is made by Apple's on-device model. In both cases the photo is used once, never stored by Gramvy, and never uploaded — not to us, not to Apple's cloud.</p>
+  <p>When you photograph a nutrition label, the text is read on your iPhone. The photo is used once, never stored by Gramvy, and never uploaded — not to us, not to Apple's cloud.</p>
 
   <h2>Notifications</h2>
-  <p>If you start a free trial and allow notifications, Gramvy schedules one local reminder on your phone two days before the trial ends. It is not sent from a server.</p>
+  <p>Gramvy only sends notifications if you allow them, and both kinds are scheduled on your phone, not sent from a server. If you turn on the evening reminder, you get one at the time you choose on days you have not reached your goal. If you start a free trial, you get one reminder two days before it ends.</p>
+
+  <h2>Sharing your day</h2>
+  <p>The image you can share when you reach your goal is drawn on your phone. It shows your protein for the day, the date and your week, and goes only where you choose to send it.</p>
 
   <h2>What Apple tells us</h2>
   <ul>
@@ -68,7 +69,7 @@
   <h2>Who we are</h2>
   <p>Gramvy is made by <strong>The Happy Legend</strong> in Sweden. Contact: <a href="mailto:contact@thehappylegend.com">contact@thehappylegend.com</a>.</p>
 
-  <footer><p>Last updated 2 October 2026.</p></footer>
+  <footer><p>Last updated 9 October 2026.</p></footer>
 </div>
 </body>
 </html>
