@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0a0a0b">
+<title>Simon Sköld – The Gentleman (utkast)</title>
+<meta name="description" content="Utkast till ny hemsida för Simon Sköld. Inofficiell mockup, inte publicerad av Simon.">
+<!-- UTKAST. Inofficiell mockup, byggd som en överraskning. All citerad text och alla bilder
+     kommer från simonskold.com och Simons egen YouTube-kanal. Inget annat är påhittat:
+     där material saknas står det "Platshållare". -->
+<script>
+(function () {
+  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var off = /[?&]motion=off/.test(location.search);
+  if (!reduce && !off) document.documentElement.className += ' fx';
+})();
+</script>
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<a class="skip" href="#varv">Hoppa till innehållet</a>
+<div class="progress" aria-hidden="true"><i></i></div>
+
+<header class="top">
+  <a class="top__logo" href="#start" aria-label="Simon Sköld, till toppen">Simon Sköld</a>
+  <nav class="top__nav" aria-label="Sidans delar">
+    <a href="#varv">Varvet</a>
+    <a href="#garage">Garaget</a>
+    <a href="#kanalen">Kanalen</a>
+    <a href="#traning">Träning</a>
+    <a href="#kontakt">Kontakt</a>
+  </nav>
+  <a class="top__cta" href="https://www.youtube.com/@simonthegentlemanskold" target="_blank" rel="noopener">YouTube <span aria-hidden="true">↗</span></a>
+</header>
+
+<main>
+
+<!-- ============ START ============ -->
+<section class="hero" id="start">
+  <canvas class="hero__streaks" id="streaks" aria-hidden="true"></canvas>
+
+  <div class="lights" aria-hidden="true">
+    <i style="--i:0"></i><i style="--i:1"></i><i style="--i:2"></i><i style="--i:3"></i><i style="--i:4"></i>
+  </div>
+
+  <figure class="hero__photo">
+    <div class="hero__photo-in">
+      <img src="img/hero.jpg" width="1280" height="720" alt="Simon Sköld i solglasögon och mockaväst framför en grå BMW X5 en höstdag." fetchpriority="high">
+    </div>
+    <figcaption class="mono">Bild · simonskold.com</figcaption>
+  </figure>
+
+  <h1 class="hero__title" aria-label="Simon Sköld, The Gentleman">
+    <span class="ln" aria-hidden="true"><span class="ch" style="--i:0">S</span><span class="ch" style="--i:1">i</span><span class="ch" style="--i:2">m</span><span class="ch" style="--i:3">o</span><span class="ch" style="--i:4">n</span></span>
+    <span class="ln" aria-hidden="true"><span class="ch" style="--i:5">S</span><span class="ch" style="--i:6">k</span><span class="ch" style="--i:7">ö</span><span class="ch" style="--i:8">l</span><span class="ch" style="--i:9">d</span></span>
+    <em class="hero__aka" aria-hidden="true">The Gentleman</em>
+  </h1>
+
+  <div class="hero__side">
+    <blockquote class="hero__quote">
+      <p>”Jag är en biltokig fighter med en passion för bilar.”</p>
+      <cite class="mono">Simons egna ord · kanalbeskrivningen på YouTube</cite>
+    </blockquote>
+    <div class="hero__btns">
+      <a class="btn btn--red" data-magnet href="https://www.youtube.com/@simonthegentlemanskold" target="_blank" rel="noopener"><span>Se kanalen</span><b aria-hidden="true">↗</b></a>
+      <a class="btn" data-magnet href="https://www.instagram.com/simonskold/" target="_blank" rel="noopener"><span>Instagram</span><b aria-hidden="true">↗</b></a>
+    </div>
+  </div>
+
+  <p class="hero__cue mono" aria-hidden="true"><i></i>Scrolla</p>
+</section>
+
+<!-- ============ TESTAT ============ -->
+<section class="ticker" aria-label="Bilar som testats på kanalen">
+  <p class="ticker__label mono">Testat på kanalen</p>
+  <div class="ticker__clip">
+    <ul class="ticker__row">
+      <li>BMW M135i</li><li>Lotus Emira Turbo SE</li><li>INEOS Grenadier</li><li>Lynk &amp; Co 08</li><li>BMW X5 M Competition</li><li>BMW iX 60</li><li>BMW M2</li><li>HYMER Yosemite</li><li>BMW E30</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ VARVET (fäst scen) ============ -->
+<section class="lap" id="varv">
+  <div class="lap__stage">
+    <header class="lap__head">
+      <p class="eyebrow mono"><b>01</b> Varvet</p>
+      <h2 class="h2" data-reveal="lines"><span class="ln"><span>Ett varv.</span></span> <span class="ln"><span>Fyra sektorer.</span></span></h2>
+      <p class="lap__intro">Allt inom citattecken är Simons egna ord, hämtade från simonskold.com och från hans YouTube-kanal.</p>
+    </header>
+
+    <div class="lap__track" aria-hidden="true">
+      <span class="lap__num">01</span>
+      <svg viewBox="0 0 600 420" role="presentation">
+        <defs>
+          <filter id="glow" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="5"/></filter>
+        </defs>
+        <path class="trk trk--kerb" d="M90 300C60 220 80 120 170 100L330 70C400 58 430 110 380 150C340 182 350 220 410 215L500 205C560 200 570 290 510 310L180 350C130 356 105 335 90 300Z"/>
+        <path class="trk trk--base" d="M90 300C60 220 80 120 170 100L330 70C400 58 430 110 380 150C340 182 350 220 410 215L500 205C560 200 570 290 510 310L180 350C130 356 105 335 90 300Z"/>
+        <path class="trk trk--glow" filter="url(#glow)" d="M90 300C60 220 80 120 170 100L330 70C400 58 430 110 380 150C340 182 350 220 410 215L500 205C560 200 570 290 510 310L180 350C130 356 105 335 90 300Z"/>
+        <path class="trk trk--line" id="trk" d="M90 300C60 220 80 120 170 100L330 70C400 58 430 110 380 150C340 182 350 220 410 215L500 205C560 200 570 290 510 310L180 350C130 356 105 335 90 300Z"/>
+        <g class="trk__marks"></g>
+        <circle class="trk__car-halo" r="13" cx="90" cy="300"/>
+        <circle class="trk__car" r="5.5" cx="90" cy="300"/>
+      </svg>
+      <p class="lap__meta mono"><span>Varv <b class="lap__pct">0</b> %</span><span>Illustration, ingen verklig bana</span></p>
+    </div>
+
+    <ol class="lap__cards">
+      <li class="sector on">
+        <p class="sector__no mono">Sektor 1</p>
+        <h3>Bilar &amp; tester</h3>
+        <blockquote>”Min stora passion i livet är bilar och på min youtube-kanal gör jag både reviews och tester av bilar.”</blockquote>
+        <p class="sector__src mono">Källa · simonskold.com</p>
+        <p class="sector__tags"><span>Spellista: Bilar &amp; Racing</span><span>Spellista: Projektbilar</span></p>
+      </li>
+      <li class="sector">
+        <p class="sector__no mono">Sektor 2</p>
+        <h3>På banan</h3>
+        <blockquote>”I år tävlar jag i BMW 325 cup och 3-timmarsserien på Gelleråsen.”</blockquote>
+        <p class="sector__src mono">Källa · kanalbeskrivningen på YouTube (utan årtal)</p>
+        <p class="sector__tags"><span>Mantorp Park</span><span>Långlopp med BMW E30</span><span>Trackday</span></p>
+      </li>
+      <li class="sector">
+        <p class="sector__no mono">Sektor 3</p>
+        <h3>Träning &amp; MMA</h3>
+        <blockquote>”Träning och bilar är mina största passioner&nbsp;…”</blockquote>
+        <p class="sector__src mono">Källa · kanalbeskrivningen på YouTube</p>
+        <p class="sector__tags"><span>Spellista: Träning</span><span>Spellista: Träning för latmaskar</span><span>Spellista: MMA</span></p>
+      </li>
+      <li class="sector">
+        <p class="sector__no mono">Sektor 4</p>
+        <h3>Snabbis med kändis</h3>
+        <blockquote>”Du kan även se mitt program Snabbis med kändis där jag träffar olika profiler i intervjuer.”</blockquote>
+        <p class="sector__src mono">Källa · simonskold.com</p>
+        <p class="sector__tags"><span>Spellista: Snabbis med kändis</span></p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ GARAGET ============ -->
+<section class="garage" id="garage">
+  <header class="sec-head">
+    <p class="eyebrow mono" data-reveal><b>02</b> Garaget</p>
+    <h2 class="h2" data-reveal="lines"><span class="ln"><span>I garaget.</span></span></h2>
+    <p class="sec-note" data-reveal>Bilarna är hämtade från kanalens beskrivning och videotitlar. Simon vet bäst vad som står där i dag, så listan stäms av med honom innan något blir skarpt.</p>
+  </header>
+
+  <ul class="cars">
+    <li class="car" data-reveal data-img="img/hero.jpg">
+      <span class="car__no mono">01</span>
+      <span class="car__name">X5 50e</span>
+      <span class="car__meta"><b>BMW</b><span class="mono">Nuvarande bil · enligt kanalbeskrivningen</span></span>
+    </li>
+    <li class="car" data-reveal>
+      <span class="car__no mono">02</span>
+      <span class="car__name">944 TURBO S</span>
+      <span class="car__meta"><b>Porsche</b><span class="mono">Nuvarande bil · enligt kanalbeskrivningen · bild saknas</span></span>
+    </li>
+    <li class="car" data-reveal data-img="img/v-t4MN09qbW-g.jpg">
+      <span class="car__no mono">03</span>
+      <span class="car__name">M135i</span>
+      <span class="car__meta"><b>BMW</b><span class="mono">Projektbilen · ”Från vardagsbil till trackdaydröm”</span></span>
+    </li>
+    <li class="car" data-reveal data-img="img/v-NCoZuJG1z98.jpg">
+      <span class="car__no mono">04</span>
+      <span class="car__name">E30</span>
+      <span class="car__meta"><b>BMW</b><span class="mono">Långlopp och trackday · Mantorp Park</span></span>
+    </li>
+  </ul>
+  <div class="peek" aria-hidden="true"><img alt="" src="img/hero.jpg" width="960" height="540"></div>
+</section>
+
+<!-- ============ KANALEN ============ -->
+<section class="strip" id="kanalen">
+  <div class="strip__stage">
+    <header class="sec-head sec-head--row">
+      <div>
+        <p class="eyebrow mono" data-reveal><b>03</b> Kanalen</p>
+        <h2 class="h2" data-reveal="lines"><span class="ln"><span>Ett urval</span></span> <span class="ln"><span>från kanalen.</span></span></h2>
+      </div>
+      <a class="btn" data-magnet href="https://www.youtube.com/@simonthegentlemanskold/videos" target="_blank" rel="noopener"><span>Alla videor</span><b aria-hidden="true">↗</b></a>
+    </header>
+
+    <ol class="strip__track">
+      <li class="vid"><a href="https://www.youtube.com/watch?v=t4MN09qbW-g" target="_blank" rel="noopener">
+        <span class="vid__img"><img loading="lazy" src="img/v-t4MN09qbW-g.jpg" width="960" height="540" alt=""></span>
+        <span class="vid__row mono"><span>01</span><span>Projektbil</span></span>
+        <span class="vid__title">Från vardagsbil till trackdaydröm – nu börjar bygget på min BMW M135i!</span></a></li>
+      <li class="vid"><a href="https://www.youtube.com/watch?v=AhZIDTtO2TU" target="_blank" rel="noopener">
+        <span class="vid__img"><img loading="lazy" src="img/v-AhZIDTtO2TU.jpg" width="960" height="540" alt=""></span>
+        <span class="vid__row mono"><span>02</span><span>Projektbil</span></span>
+        <span class="vid__title">Mappning hos Dahlbäck Racing – Hur mycket effekt får vi?</span></a></li>
+      <li class="vid"><a href="https://www.youtube.com/watch?v=esECo-ZMEbM" target="_blank" rel="noopener">
+        <span class="vid__img"><img loading="lazy" src="img/v-esECo-ZMEbM.jpg" width="960" height="540" alt=""></span>
+        <span class="vid__row mono"><span>03</span><span>Projektbil</span></span>
+        <span class="vid__title">BMW M135i med Ferrita-system – nu låter den som den förtjänar</span></a></li>
+      <li class="vid"><a href="https://www.youtube.com/watch?v=yjq-hz7FmC0" target="_blank" rel="noopener">
+        <span class="vid__img"><img loading="lazy" src="img/v-yjq-hz7FmC0.jpg" width="960" height="540" alt=""></span>
+        <span class="vid__row mono"><span>04</span><span>Bana</span></span>
+        <span class="vid__title">Mantorp Park BMW M135i – premiär på bana</span></a></li>
+      <li class="vid"><a href="https://www.youtube.com/watch?v=NCoZuJG1z98" target="_blank" rel="noopener">
+        <span class="vid__img"><img loading="lazy" src="img/v-NCoZuJG1z98.jpg" width="960" height="540" alt=""></span>
+        <span class="vid__row mono"><span>05</span><span>Bana</span></span>
+        <span class="vid__title">Mantorp Långlopp – BMW E30</span></a></li>
+      <li class="vid"><a href="https://www.youtube.com/watch?v=rvGzbWYNsgI" target="_blank" rel="noopener">
+        <span class="vid__img"><img loading="lazy" src="img/v-rvGzbWYNsgI.jpg" width="960" height="540" alt=""></span>
+        <span class="vid__row mono"><span>06</span><span>Test</span></span>
+        <span class="vid__title">Lynk &amp; Co 08 – Pluginhybrid med 20 mils räckvidd på el</span></a></li>
+      <li class="vid"><a href="https://www.youtube.com/watch?v=zRRTHpNavIc" target="_blank" rel="noopener">
+        <span class="vid__img"><img loading="lazy" src="img/v-zRRTHpNavIc.jpg" width="960" height="540" alt=""></span>
+        <span class="vid__row mono"><span>07</span><span>Test</span></span>
+        <span class="vid__title">Testar nya BMW X5 M Competition – brutal SUV med sportbilsprestanda!</span></a></li>
+      <li class="vid"><a href="https://www.youtube.com/watch?v=IC1bw4D3rrQ" target="_blank" rel="noopener">
+        <span class="vid__img"><img loading="lazy" src="img/v-IC1bw4D3rrQ.jpg" width="960" height="540" alt=""></span>
+        <span class="vid__row mono"><span>08</span><span>Test</span></span>
+        <span class="vid__title">Lotus Emira Turbo SE</span></a></li>
+      <li class="vid"><a href="https://www.youtube.com/watch?v=PzkDacDcLZQ" target="_blank" rel="noopener">
+        <span class="vid__img"><img loading="lazy" src="img/v-PzkDacDcLZQ.jpg" width="960" height="540" alt=""></span>
+        <span class="vid__row mono"><span>09</span><span>Test</span></span>
+        <span class="vid__title">Rå, robust och redo för allt – jag testar INEOS Grenadier.</span></a></li>
+      <li class="vid"><a href="https://www.youtube.com/watch?v=DNxODwU6Hzo" target="_blank" rel="noopener">
+        <span class="vid__img"><img loading="lazy" src="img/v-DNxODwU6Hzo.jpg" width="960" height="540" alt=""></span>
+        <span class="vid__row mono"><span>10</span><span>Träning</span></span>
+        <span class="vid__title">Hur mycket starkare kan jag bli på 4 veckor? (Sjukt resultat!)</span></a></li>
+      <li class="vid"><a href="https://www.youtube.com/watch?v=mqWs-ite0WQ" target="_blank" rel="noopener">
+        <span class="vid__img"><img loading="lazy" src="img/v-mqWs-ite0WQ.jpg" width="960" height="540" alt=""></span>
+        <span class="vid__row mono"><span>11</span><span>Träning</span></span>
+        <span class="vid__title">Effektivt helkroppspass hemma – inga redskap behövs!</span></a></li>
+      <li class="vid"><a href="https://www.youtube.com/watch?v=Q50oZmnPDa8" target="_blank" rel="noopener">
+        <span class="vid__img"><img loading="lazy" src="img/v-Q50oZmnPDa8.jpg" width="960" height="540" alt=""></span>
+        <span class="vid__row mono"><span>12</span><span>Garage</span></span>
+        <span class="vid__title">Jag förvandlade mitt garage – GARAGET 2.0 är här!</span></a></li>
+    </ol>
+    <p class="strip__hint mono" aria-hidden="true">Dra i sidled <span>→</span></p>
+  </div>
+</section>
+
+<!-- ============ TRÄNING (platshållare) ============ -->
+<section class="train" id="traning">
+  <header class="sec-head">
+    <p class="eyebrow mono" data-reveal><b>04</b> Träning</p>
+    <h2 class="h2" data-reveal="lines"><span class="ln"><span>Träna med</span></span> <span class="ln"><span>Simon.</span></span></h2>
+    <p class="sec-note" data-reveal><strong class="ph">Platshållare</strong> Den här delen väntar på Simon. Upplägg, priser och bokning finns inte på hans nuvarande sida, så här står ingenting påhittat. Han fyller i rutorna själv.</p>
+  </header>
+
+  <ul class="slots">
+    <li class="slot" data-reveal style="--d:.0s">
+      <p class="mono slot__no">Upplägg 1</p>
+      <h3>Rubrik från Simon</h3>
+      <p>Kort beskrivning av upplägget, med Simons egna ord.</p>
+      <p class="slot__price mono">Pris <b>—</b></p>
+    </li>
+    <li class="slot" data-reveal style="--d:.08s">
+      <p class="mono slot__no">Upplägg 2</p>
+      <h3>Rubrik från Simon</h3>
+      <p>Kort beskrivning av upplägget, med Simons egna ord.</p>
+      <p class="slot__price mono">Pris <b>—</b></p>
+    </li>
+    <li class="slot" data-reveal style="--d:.16s">
+      <p class="mono slot__no">Upplägg 3</p>
+      <h3>Rubrik från Simon</h3>
+      <p>Kort beskrivning av upplägget, med Simons egna ord.</p>
+      <p class="slot__price mono">Pris <b>—</b></p>
+    </li>
+  </ul>
+
+  <p class="train__real" data-reveal>Det som finns på riktigt redan i dag är träningen på kanalen, i spellistorna <a href="https://www.youtube.com/@simonthegentlemanskold/playlists" target="_blank" rel="noopener">Träning, Träning för latmaskar och MMA&nbsp;↗</a></p>
+</section>
+
+<!-- ============ KONTAKT ============ -->
+<section class="contact" id="kontakt">
+  <p class="eyebrow mono" data-reveal><b>05</b> Kontakt</p>
+  <h2 class="mega" data-reveal="lines"><span class="ln"><span>Häng med.</span></span></h2>
+  <ul class="contact__links">
+    <li data-reveal><a href="https://www.youtube.com/@simonthegentlemanskold" target="_blank" rel="noopener"><span class="mono">YouTube</span><b>@simonthegentlemanskold</b><i aria-hidden="true">↗</i></a></li>
+    <li data-reveal style="--d:.08s"><a href="https://www.instagram.com/simonskold/" target="_blank" rel="noopener"><span class="mono">Instagram</span><b>@simonskold</b><i aria-hidden="true">↗</i></a></li>
+    <li data-reveal style="--d:.16s"><div><span class="mono">Samarbeten</span><b class="is-ph">E-postadress <strong class="ph">Platshållare</strong></b></div></li>
+  </ul>
+</section>
+
+</main>
+
+<footer class="foot">
+  <p class="foot__name">Simon Sköld <em>The Gentleman</em></p>
+  <p class="foot__note"><strong>Det här är ett utkast.</strong> Sidan är en inofficiell mockup, byggd som en överraskning till Simon av Kristoffer. Den är inte Simons officiella sida och är inte publicerad av honom. Citat och bilder kommer från simonskold.com och Simons YouTube-kanal och tillhör Simon.</p>
+</footer>
+
+<p class="draft mono" aria-hidden="true">Utkast · inofficiell mockup</p>
+
+<script src="site.js" defer></script>
+</body>
+</html>
