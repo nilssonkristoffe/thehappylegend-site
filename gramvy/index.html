@@ -41,7 +41,10 @@
   .nav ul a{color:var(--dim); text-decoration:none; font-size:15px}
   .nav ul a:hover{color:var(--ink)}
   .pill{font-size:14px; color:var(--ink); border:1px solid #3A3A3C; border-radius:999px; padding:7px 14px; white-space:nowrap}
-  .pill i{display:inline-block; width:7px; height:7px; border-radius:50%; background:#FFB340; margin-right:8px; vertical-align:1px}
+  a.pill{text-decoration:none}
+  a.pill:hover{border-color:#636366}
+  .cta{display:inline-flex; align-items:center; margin-top:36px; padding:15px 24px; border-radius:999px; background:#D63A20; color:#fff; font-weight:600; font-size:17px; text-decoration:none}
+  .cta:hover{background:#C2341C}
 
   /* Hero */
   .hero{position:relative; overflow:hidden}
@@ -187,7 +190,7 @@
       <li><a href="#plus">Free and Plus</a></li>
       <li><a href="#privacy">Privacy</a></li>
     </ul>
-    <span class="pill" id="hamta"><i></i>In review at Apple</span>
+    <a class="pill" id="hamta" href="https://apps.apple.com/app/id6817659304">App Store</a>
   </div>
 </header>
 
@@ -197,9 +200,9 @@
     <div>
       <h1><span>Count protein,</span><span class="dim">not calories.</span></h1>
       <p class="lede">Gramvy counts one number: <strong>grams of protein</strong>. Log in two taps on your iPhone or Apple Watch, and see what is left at a glance.</p>
-      <div class="status">
-        <span><b>Sent to Apple for review on 9 October 2026.</b> This page will link to the App Store the day it is out.</span>
-        <span>Free to start. Gramvy Plus is $39.99 a year, with 7 days free.</span>
+      <a class="cta" href="https://apps.apple.com/app/id6817659304">Download on the App Store</a>
+      <div class="status" style="margin-top:16px">
+        <span>Free to start. Gramvy Plus is $39.99 a year, with 7 days free. For iPhone and Apple Watch.</span>
       </div>
     </div>
     <div class="stage" aria-label="Gramvy on iPhone and Apple Watch: 88 of 160 grams, 72 grams left">
